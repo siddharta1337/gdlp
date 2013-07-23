@@ -1,0 +1,28 @@
+@media screen and (device-aspect-ratio: 40/71) {
+    
+    #navigation .searchbox {
+        position: relative;
+        top: 216px;
+        margin-left: 28px
+    }
+    
+    div.autocomplete-suggestions {
+        bottom: 114px !important;
+    }
+
+    #wrapper, .wrapper{
+    	height: 906px;
+    }
+    #wrapperDetails {
+    	height: 885px;
+    }
+
+    .redeemButton {
+    	top: 974px;
+    }
+
+    #dealList_moreDeals{
+    	min-height: 150px;
+    }
+}
+
