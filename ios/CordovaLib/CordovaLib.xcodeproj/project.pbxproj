@@ -1687,6 +1687,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphoneos*]" = armv7;
+                "ARCHS[sdk=iphoneos7.*]" = (
+                    armv7,
+                    armv7s,
+                );
 				"ARCHS[sdk=iphoneos6.*]" = (
 					armv7,
 					armv7s,
@@ -1716,6 +1720,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=iphoneos*]" = armv7;
+                "ARCHS[sdk=iphoneos7.*]" = (
+                    armv7,
+                    armv7s,
+                );
+
 				"ARCHS[sdk=iphoneos6.*]" = (
 					armv7,
 					armv7s,
@@ -1741,6 +1750,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"ARCHS[sdk=iphoneos*]" = armv7;
+                "ARCHS[sdk=iphoneos7.*]" = (
+                    armv7,
+                    armv7s,
+                );
 				"ARCHS[sdk=iphoneos6.*]" = (
 					armv7,
 					armv7s,
@@ -1774,6 +1787,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"ARCHS[sdk=iphoneos*]" = armv7;
+                "ARCHS[sdk=iphoneos7.*]" = (
+                    armv7,
+                    armv7s,
+                );
 				"ARCHS[sdk=iphoneos6.*]" = (
 					armv7,
 					armv7s,

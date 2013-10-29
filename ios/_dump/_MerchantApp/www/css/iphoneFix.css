@@ -1,0 +1,41 @@
+@media screen and (device-aspect-ratio: 40/71) {
+    
+    /*login*/
+
+        #login .ui-content {
+            height: 1060px;
+        }
+        #forgotPass .ui-content , #codeOrg .ui-content {
+            height: 975px;
+        }
+
+        
+
+
+    #navigation .searchbox {
+        position: relative;
+        top: 216px;
+        margin-left: 28px;
+        margin-top: 145px;
+    }
+    
+    div.autocomplete-suggestions {
+        bottom: 114px !important;
+    }
+
+    #wrapper, .wrapper{
+        height: 906px;
+    }
+    #wrapperDetails {
+        height: 885px;
+    }
+
+    .redeemButton {
+        top: 974px;
+    }
+
+    #dealList_moreDeals{
+        min-height: 150px;
+    }
+}
+

@@ -1,0 +1,50 @@
+<root>
+        <listItem  title="Guido's Pizzeria and Tapas"  subtitle="For dine-in only, Value $7: gratuity will be added before the discount is applied."
+			dueDate="Use by Apr 28, 2013" 
+			imageShow="xml/img1.png"
+			imageDetails="xml/placeHolderProductDetails.png"/>
+		
+		<listItem  title="Hank's Cheese Cake" subtitle="Get $10off Hank's Famous Cakes with the use of this redemption." 
+				dueDate="Use by Sep 14, 2013" 
+				imageShow="xml/img2.png"
+				imageDetails="xml/placeHolderProductDetails2.png"/>
+        	
+        <listItem 
+        	title="Cold Stone Creamery"
+        	subtitle="Buy 1 'Love It' signature creation and get one equal oor lesser value free!" 
+        	dueDate="Use by Aug 22, 2013" 
+        	imageShow="xml/img3.png"
+        	imageDetails="xml/placeHolderProductDetails3.png"/>
+        	
+        <listItem 
+        	title="Starbucks Capuccino"
+        	subtitle="Buy 1 'Venti' and get one equal oor lesser value free!" 
+        	dueDate="Use by Aug 22, 2013" 
+        	imageShow="xml/img4.png"
+        	imageDetails="xml/placeHolderProductDetails4.png"/>
+        	
+        	
+        <listItem  title="Guido's Pizzeria and Tapas"  subtitle="For dine-in only, Value $7: gratuity will be added before the discount is applied."
+			dueDate="Use by Apr 28, 2013" 
+			imageShow="xml/img1.png"
+			imageDetails="xml/placeHolderProductDetails.png"/>
+		
+		<listItem  title="Hank's Cheese Cake" subtitle="Get $10off Hank's Famous Cakes with the use of this redemption." 
+				dueDate="Use by Sep 14, 2013" 
+				imageShow="xml/img2.png"
+				imageDetails="xml/placeHolderProductDetails2.png"/>
+        	
+        <listItem 
+        	title="Cold Stone Creamery"
+        	subtitle="Buy 1 'Love It' signature creation and get one equal oor lesser value free!" 
+        	dueDate="Use by Aug 22, 2013" 
+        	imageShow="xml/img3.png"
+        	imageDetails="xml/placeHolderProductDetails3.png"/>
+        	
+        <listItem 
+        	title="Starbucks Capuccino"
+        	subtitle="Buy 1 'Venti' and get one equal oor lesser value free!" 
+        	dueDate="Use by Aug 22, 2013" 
+        	imageShow="xml/img4.png"
+        	imageDetails="xml/placeHolderProductDetails4.png"/>	
+</root>

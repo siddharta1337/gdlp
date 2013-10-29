@@ -1,0 +1,914 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+	
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+		html,button,input,select,textarea {
+			color:#222;
+		}
+
+		body {
+			font-size:1em;
+			line-height:1.4;
+			margin: 0;
+			padding: 0;
+			/*CSD*/
+			-webkit-touch-callout: none !important;
+			
+		}
+
+		a {
+			color:#00e;
+		}
+
+		a:visited {
+			color:#551a8b;
+		}
+
+		a:hover {
+			color:#06e;
+		}
+
+
+			
+		/*
+		 * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+		 */
+		img {
+			vertical-align:middle;
+		}
+
+
+			
+		/*
+		 * Remove default fieldset styles.
+		 */
+		fieldset {
+			margin:0;
+			padding:0;
+			border:0;
+		}
+
+
+			
+		/*
+		 * Allow only vertical resizing of textareas.
+		 */
+		textarea {
+			resize:vertical;
+		}
+
+		
+		@font-face {
+			font-family:Lato;
+			src:url(../fonts/Lato/Lato-Regular.ttf);
+			font-weight: normal;
+		}
+		@font-face {
+			font-family:Lato;
+			src:url(../fonts/Lato/Lato-Bold.ttf);
+			font-weight: Bold;
+		}
+		@font-face {
+			font-family:Lato;
+			src:url(../fonts/Lato/Lato-Bold.ttf);
+			font-weight: lighter;
+		}
+		 
+
+
+
+		body {
+			font-family:Lato;
+		}
+
+
+	
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+	
+/* Login */
+
+
+   #login.ui-page {
+        background: url(../img/_global/background_goodloopLogo@2x.png) no-repeat !important;
+        background-position: 0px bottom !important;
+    }
+    
+	#login .logo {
+		padding: 46px;
+	}
+
+	#login input[type="text"] , #login input[type="password"] {
+		margin: 8px 0 21px 35px;
+		width: 533px;
+		height: 84px;
+		border-radius: 6px;
+		-webkit-border-radius: 6px;
+		display: block;
+		border: solid 2px silver;
+		font-size: 36px;
+		font-weight: lighter;
+		color: silver;
+		text-indent: 28px;
+	}
+
+	#login ::-webkit-input-placeholder {
+	   color: #c6c6c6;
+	   font-weight: lighter;
+	}
+
+	#login form{
+		height: 330px;
+	}
+
+	#login form span a{
+		position: relative;
+		top: -9px;
+		left: 320px;
+		font-size: 26px;
+		color: #00a69f;
+		text-shadow: none;
+		font-weight: normal;
+	}
+
+	#login .button {
+		display: block;
+		margin: 0 0 20px 30px;
+		width: 546px;
+		height: 105px;
+		background: url(../img/signup/signup_signin_button@2x.png);
+	}
+
+	#login .button.signInwithFB {
+		background:url(../img/signup/signup_facebook_button@2x.png);
+	}
+
+
+/* navigation */
+   #navigation.ui-page {
+        background: url(../img/_global/background_goodloopLogo@2x.png) no-repeat !important;
+        background-position: 0px bottom !important;
+        bottom: 0;
+    }
+
+	#navigation .logo {
+		padding: 65px 50px;
+	}
+
+	#navigation ul {
+		position:relative;
+		top:-6px;
+		margin:0;
+		padding:0;
+		
+	}
+
+	#navigation ul li {
+		height: 136px;
+		border-top: solid 1px silver;
+		background: url(../img/navigation/navigation_icon_goodloop@2x.png) no-repeat;
+		background-position: 532px 32px;
+		color: #919191;
+		font-size: 36px;
+		font-weight: normal;
+		line-height: 138px;
+		text-indent: 47px;
+	}
+
+	#navigation ul li:last-child {
+		border-bottom: 1px solid silver;
+		background: url(../img/navigation/navigation_icon_alert@2x.png) no-repeat;
+		background-position: 532px 23px;
+	}
+
+	
+	#navigation .searchbox,#search .searchbox {
+		/*position: absolute;
+		bottom: 22px;
+		margin: 0 0 0 20px;
+		width: 568px;
+		background: url(../img/navigation/navigation_searchBox@2x.png) no-repeat;
+		left: 18px;
+		height: 72px;
+		padding: 5px;*/
+        
+        margin: 218px 0 0 20px;
+        width: 568px;
+        background: url(../img/navigation/navigation_searchBox@2x.png) no-repeat;
+        left: 18px;
+        height: 72px;
+        padding: 5px;
+
+	}
+
+	#navigation .searchbox input, #search .searchbox input {
+		width: 447px;
+        height: 45px;
+        border: none;
+        text-indent: 15px;
+        font-size: 36px;
+        line-height: 53px;
+        -webkit-appearance: none;	
+	}
+    
+    #navigation .searchbox{
+        postition:relative
+    }
+
+    /* applies to finder button on home and search*/
+    .finderButton{
+    
+        background: transparent;
+		height: 68px;
+		width: 71px;
+		position: relative;
+		top: -67px;
+		left: 86%;
+
+    }
+
+	div.autocomplete-suggestions {
+        position: absolute;
+        bottom: 155px !important;
+        top: initial !important;
+        left: 62px !important;
+        width: 478px !important;
+        font-size: 37px;
+        color: silver;
+        background: #fff;
+    }
+
+	div.autocomplete-suggestions strong{
+		color:#000;
+	}
+
+
+/* search */
+	#search .searchbox {
+		top:6px;
+		margin:0 0 0 6px;
+	}
+
+	#search .finderButton{
+		top: -55px;
+	}
+    
+    
+    div.searchPage {
+	    top: 170px !important;
+	    bottom: initial;
+	    left: 15px!important;
+	    width: 459px !important;
+	    padding: 0 0 0 41px;
+    }
+
+    /* common class in search and deal list */
+    li.errorHeader{
+    	background: none !important;
+		font-size: 40px;
+		padding: 105px 15px;
+		border: none;
+		color: #666;
+		text-align: center;
+		border-bottom: none !important;
+    }
+    #search .searchResults li{
+       
+    }
+    
+
+    /*
+	#search .searchResults ul {
+		position:absolute;
+		top:99px;
+		left:21px;
+		margin:0;
+		padding:0;
+		width:279px;
+	}
+    
+
+	#search .searchResults ul li {
+		height:33px;
+		list-style-type:none;
+		text-indent:9px;
+		line-height:33px;
+	}
+    */
+
+
+		
+/* Deal List */
+	.availability {
+		padding: 23px 0 0 19px;
+		height: 78px;
+		border: 0;
+		width: 411px;
+	}
+
+	.availability .box {
+		padding: 5px;
+		width: 202px;
+		height: 42px;
+		text-align: center;
+		float: left;
+		border: solid 2px silver;
+		border-radius: 10px 0 0 10px;
+		color: #919191;
+		font-size: 22px;
+		line-height: 41px;
+		font-weight: normal;
+	}
+	.availability .box.active {
+		background: #21aea7;
+		color: #ffffff;
+	}
+
+	.availability .box.comingSoon {
+		width: 174px;
+		border-radius: 0 10px 10px 0;
+		position: relative;
+		left: -2px;
+	}
+
+	#dealList .filter {
+		position: absolute;
+		top: 111px;
+		left: 442px;
+		width: 178px;
+		height: 55px;
+		background: url(../img/dealList/dealList_filter@2x.png);
+	}
+
+	.mainList {
+		margin:0;
+		padding:0;
+	}
+
+	.mainList li {
+		clear: both;
+		overflow: auto;
+		list-style-type: none;
+		border-bottom: 2px solid silver;
+		background: url(../img/_global/list_arrow_icon@2x.png) no-repeat;
+		background-position: 590px center;
+		min-height: 240px;
+	}
+
+	.mainList li img {
+		float: left;
+		margin: 0 27px 0 0;
+		height: 240px;
+		width: 183px;
+	}
+
+	.mainList li h2 {
+		float: left;
+		margin: 0 0 6px 0;
+		padding: 22px 0 0;
+		width: 65%;
+		font-size: 36px;
+	}
+
+	.mainList li p {
+		margin: 0;
+		width: 371px;
+		font-size: 28px;
+		line-height: 31px;
+		float: left;
+	}
+
+	.mainList li .dueDate {
+		color: #ff0000;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 38px;
+	}
+
+	#dealList_moreDeals {
+		color: #06a099;
+		font-size: 36px;
+		font-weight: bold;
+		text-align: center;
+		padding: 15px 0 0 0;
+		background: none;
+		height: 80px;
+		line-height: 80px;
+		border-bottom: none;
+	}
+	#dealList_moreDeals span {
+		background: url(../img/dealList/dealList_indent.png) no-repeat center center;
+		width: 60px;
+		height: 23px;
+		display: inline-block;
+	}
+
+/** FILTER **/
+
+
+		#scrollerFilter{
+		    /*display:none*/
+		}
+
+ 
+		#demo_dummy , #dealList_filter .ui-input-text{
+			box-shadow: none !important;
+			border: none!important;
+			color: #fff!important;
+		}
+		
+/*
+.ios .dwcc {
+//zoom: 1.99;
+}
+*/		
+		.ios .dw {
+		    /*top: 344px !important; */
+		    border: none;
+		}
+		
+		
+
+		.ios .dwwr{
+			zoom: 1;
+			height: 475px;
+			padding-top: 80px;
+			background: 
+			#000;
+			left: -1px;
+			width: 621px;
+			margin-top: 62px;
+		}
+
+		 
+
+		.ios .dww .dw-li {
+			font-size: 34px;
+			 
+		}
+		.ios .dw .dwb {
+		    font-size: 24px;
+		    width: 607px;
+		    height: 394px;
+		    background: none;
+		    text-indent: -100px;
+		    border: none;
+		}
+		 
+		.ios .dw .dwbc {
+			height: 135px;
+		    bottom: 0;
+		    top: auto;
+		    background: #000;
+		    border: none;
+		}
+		 
+		.ios .dwb-s {
+		    width: 100%;
+		    float: none;
+		    text-align: right;
+		    position: absolute;
+		    background: #000;
+		    border: none;
+		}
+		.ios .dwb-s  .dwb{
+		    background: url(../img/dealList/dealList_display_results_button@2x.png) center center no-repeat;
+		    width: 96%;
+		    border-radius: 0;
+		    height: 92px;
+		    text-indent: -500px;
+		    text-align: left;
+		    overflow: hidden;
+		    margin: 20px auto;
+		    border: none;
+		}
+		.ios .dwb-c {
+		    display: block;
+		    position: absolute;
+		    top: -771px;
+		    opacity: 0
+		}
+
+		.ios .dwwol {
+			background:  -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(185,211,151,1)), color-stop(26%,rgba(216,236,193,1)), color-stop(70%,rgba(216,236,193,1)), color-stop(98%,rgba(185,211,151,1)), color-stop(99%,rgba(252,252,252,1)), color-stop(100%,rgba(185,211,151,1))); 
+			z-index: 100;
+			display: block;
+			opacity: 0.5;
+			height: 80px;
+			top: 167px;
+		}
+
+ 
+
+
+
+/* My Offers */
+/* this screen inherits mostly from deal List*/
+	#myOffers .availability{
+		width: auto;
+	}
+
+	#myOffers .availability .box {
+		width: 268px;
+	}
+
+	#myOffers .box.alreadyRedeemed{
+		border-radius: 0px 10px 10px 0px;
+		left: -1px;
+		position: relative;
+	}
+
+	#myOffers .mainList li h2 {
+	    width: 80%;
+	}
+	#myOffers .mainList li p{
+	    width: 80%;
+	}
+
+	#myOffers .mainList li {
+
+	    background-position: 560px center;
+	    padding: 5px 19px;
+	    min-height: 180px;
+	}
+
+	#myOffers .mainList li.errorHeader{
+		padding-top: 65px;
+	}
+
+	/* iScroll */
+
+	#wrapper , .wrapper{
+		position: absolute;
+		z-index: 1;
+		top: 189px;
+		bottom: 48px;
+		left: 0;
+		width: 100%;
+		overflow: auto;
+		height: 730px;
+	}
+
+ 
+
+ 
+
+/* OFFER DETAILS */
+
+	#offerDetails .ui-content {
+		padding: 13px 18px;
+	}
+	#offerDetails h2{
+		margin: 0;
+		padding: 0;
+		font-size: 48px;
+	}
+
+	#offerDetails img{
+		/*margin: 13px 0 0 0; */
+		position: absolute;
+		top: 0px;
+		left: 0px;
+ 
+	
+	}
+
+ 
+	
+	#offerDetails_image_container{
+		margin: 13px 0 0 0;
+		display: block;
+		width: 600px;
+		height: 300px;
+		position: relative;
+	}
+
+	#offerDetails h3{
+		font-size: 36px;
+		margin: 0 0 15px 0;
+		padding: 17px 18px;
+		line-height: 46px;
+	}
+
+	#offerDetails .box {
+		border-top: 2px solid silver;
+		height: 97px;
+		background: url(../img/details/offerdetails_calendar_icon@2x.png) no-repeat 12px 17px;
+		position: relative;
+	}
+	#offerDetails .box small {
+		font-size: 21px;
+		display: block;
+		position: absolute;
+		top: 11px;
+		left: 510px;
+		width: 100px;
+	}
+	#offerDetails .box strong {
+		position: absolute;
+		top: 27px;
+		right: 40px;
+		width: 465px;
+		font-size: 40px;
+		text-align: right;
+	}
+
+	#offerDetails .offersLeft{
+		background:url(../img/details/offerdetails_alert_icon@2x.png) no-repeat 12px 14px;
+		border-bottom: solid 2px silver;
+	}
+
+	#offerDetails .offersLeft small {
+		top: 52px;
+		width: 200px;
+		left: 452px;
+	}
+
+	#offerDetails .offersLeft strong {
+		top: 10px;
+	}
+
+	#wrapperDetails{
+		position: absolute;
+		width: 100%;
+		overflow: auto;
+		height: 708px;
+	}
+
+
+	.redeemButton{
+		background: url(../img/details/offerdetail_select_button@2x.png) no-repeat;
+		height: 120px;
+		display: block;
+		margin: 0;
+		width: 100%;
+		position: absolute;
+		top: 800px;
+		/*bottom: 0px;*/
+	}
+
+	.redeemButton.selected {
+		background: url(../img/details/offerdetail_redeem_button@2x.png) no-repeat; 
+	}
+
+
+
+	#redeemDeal .logo{
+		margin: 14px 0 8px 47px;
+	}
+	#redeemDeal h2{
+		font-size: 48px;
+		margin: 0;
+		text-align: center;
+	}
+	#redeemDeal h3 {
+		font-size: 36px;
+		margin: 0 auto;
+		width: 484px;
+		font-weight: normal;
+	}
+	
+	#redeemDeal .qrCode{
+		margin: auto;
+		text-align: center;
+		width:282px;
+		height:282px;
+	}
+	#redeemDeal .redeemButton {
+		background: url(../img/redeeem/redeem_redeem_button@2x.png) no-repeat center;
+    }
+
+	
+/**** JQUERY OVERRIDES ************/
+	.ui-body-c,.ui-overlay-c {
+		background:none!important;
+		background-image:none!important;
+	}
+
+	.ui-bar-a {
+		height: 85px;
+		background-color: #5e5e5e;
+		background-image: none;
+		border-bottom: solid 2px #000;
+	}
+
+	.ui-bar-a .ui-title {
+		margin: 0;
+		font-weight: lighter;
+		font-size: 40px;
+		line-height: 86px;
+	}
+
+
+		
+	/*botones del header*/
+	.ui-header a.ui-btn-left   {
+		top: 7px;
+		left: 7px;
+		display: block;
+		width: 106px;
+		height: 101px;
+		background: url(../img/_global/global_back_button@2x.png) no-repeat;
+	}
+	.shareButton.ui-btn-right{
+		top: 7px;
+		width: 106px;
+		height: 101px;
+		background: url(../img/_global/global_share@2x.png) no-repeat;
+		right: 10px;
+
+	}
+
+	/* loader icon*/
+	.ui-icon-loading {
+		background-repeat:no-repeat;
+		background-size: 88px;
+	}
+	.ui-loader .ui-icon {
+		width: 88px;
+		height: 88px;
+		-webkit-border-radius: 88px;
+		border-radius: 88px;
+	}
+
+	/* SHARING OVERLAY */
+
+	#shareOverlay{
+		display: none;
+		position: absolute;
+		background: transparent;
+		z-index: 10000;
+		width: 100%;
+		height: 100%;
+	}
+
+	#shareOverlay .modalWin{
+		background: url(../img/details/offerdetails_share_gradient_background@2x.png);
+        width: 100%;
+        height: 640px;
+        position: absolute;
+        bottom: -1px;
+        display: block;
+	}
+    
+    #shareOverlay .modalWin a {
+        height: 108px;
+        display: block;
+        width: 580px;
+        margin: 1px auto;
+        background-repeat: no-repeat;
+        
+    }
+    
+    
+    #shared_facebook{
+        background-image: url(../img/details/buttons/offerDetails_facebook@2x.png);
+        margin-top: 90px !important;
+    }
+    #shared_twitter {
+        background-image: url(../img/details/buttons/offerDetails_twitter@2x.png);
+    }
+    #shared_pinterest {
+        background-image: url(../img/details/buttons/offerDetails_pinterest@2x.png);
+    }
+ 
+    #shared_message {
+        background-image: url(../img/details/buttons/offerDetails_message@2x.png);
+    }
+
+    #shared_email {
+        background-image: url(../img/details/buttons/offerDetails_email@2x.png);
+    }
+
+
+	
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+   /*CSD*/
+   *{-webkit-user-select: none;}
+   input {-webkit-user-select: text;}
+		
+	/* Prevent callout */
+	.nocallout {
+		-webkit-touch-callout:none;
+	}
+
+	.pressed {
+		background-color:rgba(0,0,0,0.7);
+	}
+
+
+		
+	/* A hack for HTML5 contenteditable attribute on mobile */
+	textarea[contenteditable] {
+		-webkit-appearance:none;
+	}
+
+
+		
+	/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+	   they have been set as display: none */
+	.gifhidden {
+		position:absolute;
+		left:-100%;
+	}
+
+
+		
+	/*
+	 * Image replacement
+	 */
+	.ir {
+		display:block;
+		overflow:hidden;
+		border:0;
+		background-color:transparent;
+		background-repeat:no-repeat;
+		text-align:left;
+		text-indent:-999em;
+		direction:ltr;
+	}
+
+	.ir br {
+		display:none;
+	}
+
+
+		
+	/*
+	 * Hide from both screenreaders and browsers: h5bp.com/u
+	 */
+	.hidden {
+		display:none!important;
+		visibility:hidden;
+	}
+
+
+		
+	/*
+	 * Hide only visually, but have it available for screenreaders: h5bp.com/v
+	 */
+	.visuallyhidden {
+		position:absolute;
+		overflow:hidden;
+		clip:rect(0000);
+		margin:-1px;
+		padding:0;
+		width:1px;
+		height:1px;
+		border:0;
+	}
+
+
+		
+	/*
+	 * Extends the .visuallyhidden class to allow the element to be focusable
+	 * when navigated to via the keyboard: h5bp.com/p
+	 */
+	.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {
+		position:static;
+		overflow:visible;
+		clip:auto;
+		margin:0;
+		width:auto;
+		height:auto;
+	}
+
+
+		
+	/*
+	 * Hide visually and from screenreaders, but maintain layout
+	 */
+	.invisible {
+		visibility:hidden;
+	}
+
+
+		
+	/**
+	 * Clearfix helper
+	 * Used to contain floats: h5bp.com/q
+	 */
+	.clearfix:before,.clearfix:after {
+		display:table;
+		content:"";
+	}
+
+	.clearfix:after {
+		clear:both;
+	}
+
+
+		
+ 
