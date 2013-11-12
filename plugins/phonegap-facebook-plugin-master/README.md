@@ -19,29 +19,29 @@ If you plan on rolling this out on Android, please note that you will need to [g
 # Project Structure
 
 <pre>
-  |-example
-  |  `-Simple
-  |    `-index.html
-  |  `-HackBook
-  |    `-index.html
-  |    `-README
-  |    `-hackbook.manifest
-  |    `-img
-  |    `-css
-  |    `-js
-  |-test
-  |  `-pg-plugin-fb-connect-tests.js
-  |-src
-  |  `-android
-  |      `-ConnectPlugin.java
-  |      `-facebook
-  |  `-ios
-  |      `-FacebookConnectPlugin.m
-  |      `-FacebookConnectPlugin.h
-  |      `-facebook
-  |`-www
-  |  `-cdv-plugin-fb-connect.js
-  |  `-facebook_js_sdk.js
+  |_example
+  |  |_Simple
+  |  | |_index.html
+  |  |_HackBook
+  |    |_index.html
+  |    |_README
+  |    |_hackbook.manifest
+  |    |_img
+  |    |_css
+  |    |_js
+  |_test
+  | |_pg-plugin-fb-connect-tests.js
+  |_src
+  | |_android
+  | | |_ConnectPlugin.java
+  | | |_facebook
+  | |_ios
+  |   |_FacebookConnectPlugin.m
+  |   |_FacebookConnectPlugin.h
+  |   |_facebook
+  |_www
+  |  |_cdv-plugin-fb-connect.js
+  |  |_facebook_js_sdk.js
 </pre>
 
 
@@ -111,6 +111,7 @@ Create a basic Cordova iOS application by following the [PhoneGap Getting Starte
 12. Add the **Social.framework** framework. Make it an optional framework to support pre iOS6 apps.
 13. Add the **Accounts.framework** framework. Make it an optional framework to support pre iOS6 apps.
 14. Add the **AdSupport.framework** framework. Make it an optional framework to support pre iOS6 apps.
+15. Add the **Security.framework** framework. Make it an optional framework to support pre iOS6 apps.
 
 ### Add the Cordova Facebook Plugin
 
@@ -153,7 +154,7 @@ Or you can allow all domains with (set to this by default):
 
 ### iOS URL Scheme
 
-Make sure you add the scheme to your [PROJECTNAME]-Info.plist (located as one of the files in your Xcode project), substitute [APP_ID] below to the appropriate values. This is to handle the re-direct from Mobile Safari or the Facebook app, after permission authorization.
+Make sure you add the scheme to your [PROJECTNAME]-Info.plist (located as one of the files in your Xcode project), substitute [APP_ID] below to the appropriate values (replace those brackets!). This is to handle the re-direct from Mobile Safari or the Facebook app, after permission authorization.
 
 * [**APP_ID**] is the Facebook app id given by Facebook
 
@@ -172,7 +173,7 @@ Make sure you add the scheme to your [PROJECTNAME]-Info.plist (located as one of
 ## Automatic Installation
 This plugin is based on [plugman](https://git-wip-us.apache.org/repos/asf?p=cordova-plugman.git;a=summary). To install it to your app, simply execute plugman as follows; It does not currently work with plugman at all. WORK IN PROGRESS 
 
-	plugman --platform [PLATFORM] --project [TARGET-PATH] --plugin [PLUGIN-PATH] APP_ID="[APP_ID]"
+	plugman install --platform [PLATFORM] --project [TARGET-PATH] --plugin [PLUGIN-PATH] --variable APP_ID="[APP_ID]" --variable APP_NAME="[APP_NAME]"
 	
 	where
 		[PLATFORM] = ios or android

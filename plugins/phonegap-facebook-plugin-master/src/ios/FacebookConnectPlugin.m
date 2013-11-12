@@ -9,7 +9,6 @@
 //
 
 #import "FacebookConnectPlugin.h"
-#import "FBSBJSON.h"
 
 @interface FacebookConnectPlugin ()
 
@@ -31,6 +30,23 @@
         }
     
         [FBSession.activeSession handleOpenURL:url];
+}
+
+- (void)pluginInitialize
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppDidBecomeActive:)
+                                                 name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+/*
+ * This method is called to let your application know that it moved from the inactive to active state.
+ */
+- (void)onAppDidBecomeActive:(NSNotification*)notification
+{
+    // We need to properly handle activation of the application with regards to Facebook Login
+    // (e.g., returning from iOS 6.0 Login Dialog or from fast app switching).
+    // See https://developers.facebook.com/docs/tutorials/ios-sdk-tutorial/authenticate/
+    [FBSession.activeSession handleDidBecomeActive];
 }
 
 /*
@@ -102,7 +118,23 @@
             }
         } else if (error.fberrorCategory == FBErrorCategoryUserCancelled) {
             // The user has cancelled a login. You can inspect the error
-            // for more context. In the plugin, we will simply ignore it.
+            // for more context.  Per the Facebook JS SDK, treat cancels as
+            // a success and let the caller distinguish them by checking
+            // response.authResponse.
+            //
+            // See comment for FB.login (facebook-js-sdk.js ln 6087):
+            //
+            //     FB.login(function(response) {
+            //       if (response.authResponse) {
+            //         // user successfully logged in
+            //       } else {
+            //         // user cancelled login
+            //       }
+            //     });
+            //
+            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
+                                                          messageAsDictionary:[self responseObject]];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:self.loginCallbackId];
         } else {
             // For simplicity, this sample treats other errors blindly.
             alertMessage = @"Error. Please try again later.";
@@ -288,13 +320,26 @@
         if ([obj isKindOfClass:[NSString class]]) {
             params[key] = obj;
         } else {
-            // For optional ARC support
+            NSError *error;
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:obj
+                                                               options:0
+                                                                 error:&error];
+            if (jsonData) {
+                NSString *jsonDataString = [[NSString alloc] initWithData:jsonData
+                                                                 encoding:NSUTF8StringEncoding];
+                params[key] = jsonDataString;
 #if __has_feature(objc_arc)
-            FBSBJSON *jsonWriter = [FBSBJSON new];
 #else
-            FBSBJSON *jsonWriter = [[FBSBJSON new] autorelease];
+                [jsonDataString release];
 #endif
-            params[key] = [jsonWriter stringWithObject:obj];
+            }
+//            // For optional ARC support
+//#if __has_feature(objc_arc)
+//            FBSBJSON *jsonWriter = [FBSBJSON new];
+//#else
+//            FBSBJSON *jsonWriter = [[FBSBJSON new] autorelease];
+//#endif
+//            params[key] = [jsonWriter stringWithObject:obj];
         }
     }];
     
