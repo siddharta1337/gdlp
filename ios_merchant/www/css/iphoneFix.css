@@ -1,0 +1,72 @@
+@media screen and (device-aspect-ratio: 40/71) {
+    
+    /*login*/
+
+        #login .ui-content {
+            height: 1060px;
+        }
+        #forgotPass .ui-content , #codeOrg .ui-content {
+            height: 975px;
+        }
+
+        
+
+
+    #navigation .searchbox {
+        position: relative;
+        top: 216px;
+        margin-left: 28px;
+        margin-top: 145px;
+    }
+    div.autocomplete-suggestions{
+          bottom: 182px !important; 
+    }
+    
+    div.autocomplete-suggestions.searchPage {
+        bottom: 114px !important;
+        /* bottom: 182px !important; */
+    }
+
+    #wrapper, .wrapper{
+        height: 945px;
+    }
+    #wrapperDetails {
+        height: 1048px;
+    }
+
+    .redeemButton {
+        top: 974px;
+    }
+
+    #dealList_moreDeals{
+        min-height: 150px;
+    }
+
+
+    .ui-page{
+        min-height: 1140px!important;
+    }
+
+    /* fix the cancel button in iphone5*/
+
+    .ios .dwb-c{display: block;
+        position: absolute;
+        top: -900px;
+        opacity: 0;
+        height: 480px
+    }
+    
+
+    .iOS7 .redeemButton{
+        top: 1020px;
+    }
+    
+    .iOS7 div.autocomplete-suggestions.navigatorComplete{
+        /*bottom: 192px!important;*/
+        bottom: -290px!important;
+    }
+    
+
+
+
+}

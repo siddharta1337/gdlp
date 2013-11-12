@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html> 
+    
+    <head>
+        
+        <title></title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+       
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5, maximum-scale=0.5" />
+        
+        <meta http-equiv="cleartype" content="on">
+        
+ 
+
+        <!-- jquery -->        
+                
+                <link href="js/jquery-mobile/jquery.mobile-1.3.1.min.css" rel="stylesheet" type="text/css"/>
+
+                <script src="js/jquery-mobile/jquery-1.9.1.min.js" type="text/javascript"></script>
+                <script src="js/jquery-mobile/jquery.mobile-1.3.1.min.js" type="text/javascript"></script>
+                <script type="text/javascript" src="js/iscroll.js"></script>
+                
+                <!-- mobiscroll  
+                <link href="libs/mobiscroll-2.5.3/css/mobiscroll.custom-2.5.3.min.css" rel="stylesheet" type="text/css" />
+
+                <script src="libs/mobiscroll-2.5.3/js/mobiscroll.custom-2.5.3.min.js" type="text/javascript"></script>
+
+                -->
+
+        <!-- mobiscroll 2.6 -->
+
+            <script src="libs/mobiscroll-2.6.4/js/mobiscroll.core.js" type="text/javascript"></script>
+            <script src="libs/mobiscroll-2.6.4/js/mobiscroll.ios.js" type="text/javascript"></script>
+            <script src="libs/mobiscroll-2.6.4/js/mobiscroll.jqm.js" type="text/javascript"></script>
+
+            <link href="libs/mobiscroll-2.6.4/css/mobiscroll.core.css" rel="stylesheet" type="text/css" />
+            <link href="libs/mobiscroll-2.6.4/css/mobiscroll.ios.css" rel="stylesheet" type="text/css" />
+            <link href="libs/mobiscroll-2.6.4/css/mobiscroll.jqm.css" rel="stylesheet" type="text/css" />
+
+             <link href="libs/mobiscroll-2.6.4/css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+                
+        <!-- autocomplete -->
+
+                <script type="text/javascript" src="libs/autocomplete/jquery.autocomplete.js"></script>
+
+        <!-- lazy load -->
+                <script type="text/javascript" src="libs/jquery.lazyload.min.js"></script>
+                
+                    
+        
+
+        <!-- Google Maps -->
+
+                <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+                
+        <!-- QR reader -->
+                <script src="libs/barcodescanner.js"></script>  
+        <!-- CSS Base -->
+                <link rel="stylesheet" href="css/normalize.css">
+                <link rel="stylesheet" href="css/main.css">
+                
+                <link rel="stylesheet" href="css/iphoneFix.css">
+               
+             
+    </head>
+    
+    <body>
+
+
+<!--  Activity Detail   -->
+    <div data-role="page" id="activityDetail">
+        <div data-role="header">
+            <a href="#dealList" data-role="none" data-rel="back"></a>
+            <h1>Offer Activity</h1>
+            <a data-role="none" class="shareButton" id="shareButton"></a>
+        </div>
+        <div class="section">
+            <div class="availability">
+                <div class="box active" id="activity_today">Today</div>
+                <div class="box" id="activity_week">Week</div>
+                <div class="box" id="activity_month">Month</div>
+            </div>
+        </div>
+
+        
+        <div class="activityDetail_conts" >
+             
+                <div id="activityDetail_title">
+                    $6 off any 18” Pizza, $4 off any 16” Pizza or $2 off any 14” Pizza.
+                </div>
+
+                <div class="activity_selected">
+                    <h2>Selected</h2>
+                    <h3 id="activityDetail_selected_count">100</h3>
+                    
+                    <div class="stats">
+                        <div class="barContainer">
+                            <div id="activityDetail_selected_count_bar" class="countBar"></div>
+                        </div>
+                        
+                        <div class="selected">
+                            <span id="activityDetail_selected_offers">50%</span> Selected
+                        </div>
+                        
+                        <div class="offers">
+                            <span id="activityDetail_offers_available">200</span> Offers Available
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            
+                <div class="activity_selected redeemed">
+                    <h2>Redeemed</h2>
+                    <h3 id="activityDetail_selected_count">40</h3>
+                    
+                    <div class="stats">
+                        <div class="barContainer">
+                            <div id="activityDetail_redemed_count_bar" class="countBar"></div>
+                        </div>
+                        
+                        <div class="selected">
+                            <span id="activityDetail_offers_redeemed">30%</span> Redeemed
+                        </div>
+                        
+                        <div class="offers">
+                            <span id="activityDetail_offers_available_redeemed">200</span> Offers Available
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+
+                
+        </div>
+        
+        <!--
+        <div class="redeemButton" id="redeemDeal_main_button"></div>
+        -->
+    </div>
+
+        
+
+<!-- activity -->
+    <div data-role="page" id="myOffers">
+        <div data-role="header" >
+            <a href="#" data-role="none" data-rel="back" ></a>
+            <h1>
+                Account Activity
+                <span id="myOffers_titleNum"></span>
+            </h1>
+        </div>
+        <div class="section">
+            <div class="availability">
+                <div class="box active" id="activity_today">Current</div>
+                <div class="box" id="activity_week">Expired</div>
+            </div>
+        </div>
+        
+        <div data-role="content" >
+            
+            <div id="wrapper_myOffers" class="wrapper" >
+                <div class="searchResults">
+                    <ul class="mainList" id="myOffers_main">
+                        <li class="link">
+                            
+                            <p>$6 off any 18” Pizza, $4 off any 16” Pizza or $2 off any 14” Pizza.</p>
+                            <p class="dueDate">unlock code: <span>59612</span></p>
+                        </li>
+                        <li class="link">
+                            
+                            <p>Free parking in the Zoo parking lot, plus free train ride for two adults.</p>
+                            <p class="dueDate">Use by Jan 1, 2014</p>
+                        </li>
+                        <li class="link">
+                            
+                            <p>Free parking in the Zoo parking lot, plus free train ride for two adults.</p>
+                            <p class="dueDate">Use by Jan 1, 2014</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<!--  redeem Deal    -->
+    <div data-role="page" id="redeemDeal">
+        <div data-role="header">
+            <a href="" data-role="none" data-rel="back"></a>
+            <h1 id="redeemDeal_name">Redeem</h1>
+        </div>
+
+        <div class="redeemContent">
+            <!--
+            <img src="img/redeeem/redeem_goodLoop_logo@2x.png" class="logo" />      
+            -->
+            <h2 id="redeemDeal_name_main"></h2>
+
+            <h3 id="redeemDeal_details"></h3>
+
+            <div class="qrCode" id="redeem_qrCode"></div>
+
+            <span id="redeemCodeTxt"></span>
+
+            <div class="redeemButton" id="redeemDeal_withCode">
+                <a href="#" data-role="none"></a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+<!--///////////-->
+    <script>
+         
+ 
+                  
+    </script>
+
+    
+    <div id="shareOverlay">
+
+        <div class="modalWin">
+            
+            <a href="" id="shared_facebook"> </a>
+            <a href="" id="shared_twitter"> </a>
+            <a href="" id="shared_message"> </a>
+            <a href="" id="shared_email"> </a>
+            
+        </div>
+    </div>
+
+    <div id="domShield">
+        
+    </div>
+
+    <div id="fb-root"></div>
+                                    
+    </body>
+</html>
