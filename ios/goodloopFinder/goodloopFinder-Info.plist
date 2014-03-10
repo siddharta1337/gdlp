@@ -42,14 +42,14 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb526516804062354</string>
+				<string>fb439418256142420</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.8.1</string>
 	<key>FacebookAppID</key>
-	<string>526516804062354</string>
+	<string>439418256142420</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
