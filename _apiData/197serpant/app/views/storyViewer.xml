@@ -1,0 +1,19 @@
+<Alloy>
+	<Window class="container"> 
+
+		<View id="storyStage"> </View>
+ 
+ 		<View id="navBar">
+
+			<View onClick="back" id="back"></View>
+
+			<View onClick="stopSpeech" id="speech"></View>
+			<View  id="audio"></View>
+
+			<View onClick="exitStory" id="home"></View>
+			<View onClick="next" id="next"></View>
+
+ 		</View>
+
+	</Window>
+</Alloy>

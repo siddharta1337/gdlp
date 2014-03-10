@@ -1,0 +1,5 @@
+<Alloy>
+	<View id="pedalMenuElement">
+		<ImageView image="/bookshelf/bookshelf_pedalMenu_container.png" id="pedal_circleContainer"> </ImageView>
+	</View>
+</Alloy>

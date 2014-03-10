@@ -1,0 +1,7 @@
+<Alloy>
+	<Window class="container"> 
+
+		<Button onClick="cerrar"> Back </Button>
+		
+	</Window>
+</Alloy>

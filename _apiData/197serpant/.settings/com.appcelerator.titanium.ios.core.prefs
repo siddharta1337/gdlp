@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+provisioning_profiles/development/424D71A8-ACF5-4C8E-8082-302D48796641/appid=com.winecosmo.winecosmo
+provisioning_profiles/development/424D71A8-ACF5-4C8E-8082-302D48796641/name=wineCosmo
+provisioning_profiles/development/424D71A8-ACF5-4C8E-8082-302D48796641/uuid=424D71A8-ACF5-4C8E-8082-302D48796641
+provisioning_profiles/development/5C7A3CC3-E015-40FA-84E4-0C5FD31CBED0/appid=*
+provisioning_profiles/development/5C7A3CC3-E015-40FA-84E4-0C5FD31CBED0/name=iOS Team Provisioning Profile\: *
+provisioning_profiles/development/5C7A3CC3-E015-40FA-84E4-0C5FD31CBED0/uuid=5C7A3CC3-E015-40FA-84E4-0C5FD31CBED0
+provisioning_profiles/development/6E08AFC9-C185-46A6-8877-E0C5D232F980/appid=org.goodloop.dealFinder
+provisioning_profiles/development/6E08AFC9-C185-46A6-8877-E0C5D232F980/name=iOS Team Provisioning Profile\: org.goodloop.dealFinder
+provisioning_profiles/development/6E08AFC9-C185-46A6-8877-E0C5D232F980/uuid=6E08AFC9-C185-46A6-8877-E0C5D232F980
+provisioning_profiles/development/E5134FAE-03B9-4115-8FC9-C2B24FD9FB83/appid=*
+provisioning_profiles/development/E5134FAE-03B9-4115-8FC9-C2B24FD9FB83/name=iOS Team Provisioning Profile\: *
+provisioning_profiles/development/E5134FAE-03B9-4115-8FC9-C2B24FD9FB83/uuid=E5134FAE-03B9-4115-8FC9-C2B24FD9FB83

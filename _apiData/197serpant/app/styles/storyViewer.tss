@@ -1,0 +1,45 @@
+".container":{
+	backgroundColor:"#ffffff",
+},
+"Button":{
+	backgroundColor:"#ffffff",
+},
+"#navBar":{
+	height:100,
+	top:0
+},
+"#back":{
+	left:0,
+	top:0,
+	width:107,
+	height:99,
+	backgroundImage:"/menu/button_prev.png"
+},
+"#next":{
+	right:0,
+	top:0,
+	width:110,
+	height:100,
+	backgroundImage:"/menu/button_next.png"
+	
+},
+"#speech":{
+	left:186,
+	top:0,
+	width:108,
+	height:95,
+	backgroundImage:"/menu/button_speech.png"
+},
+"#audio":{
+	left:294,
+	top:0,
+	width:97,
+	height:97,
+	backgroundImage:"/menu/button_sound.png"	
+},
+"#home":{
+	top:0,
+	width:98,
+	height:93,
+	backgroundImage:"/menu/bookshelf_navigator_home.png"
+}

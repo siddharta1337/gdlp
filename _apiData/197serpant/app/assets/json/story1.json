@@ -1,0 +1,863 @@
+[
+    {
+        "slideTitle": "00_Intro",
+        "stageElements": [
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen0-background.png",
+                    "top": 0,
+                    "width": "100%",
+                    "height": "100%",
+                    "left": 0
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen0-text.png",
+                    "left": 197,
+                    "top": 125,
+                    "width": "380dip",
+                    "height": "528dip",
+                    "opacity": 0
+                },
+                "animation": {
+                    "duration": 3000,
+                    "opacity": 1,
+                    "delay": 2000
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen0-kidsHang.png",
+                    "left": 269,
+                    "top": 0,
+                    "width": "649dip",
+                    "height": "738dip"
+                },
+                "animation": {
+                    "rotate": 40,
+                    "rotateAxis": "topCenter",
+                    "duration": 2500,
+                    "repeat": 5,
+                    "autoreverse": "true"
+                }
+            }
+        ]
+    },
+    {
+        "slideTitle": "00_T_Intro",
+        "stageElements": [
+            {
+                "type": "textSlide",
+                "properties": {
+                    "left": 0,
+                    "top": 0
+                },
+                "audio_EN": "01_story_of_the_sea.mp3",
+                "audio_ES": "01_story_of_the_sea.mp3",
+                "text_EN": "Inori loved nights. In the cool dark, tiny frogs hopped towards the house, the scent of humid sand drifted in the air. The kettle bubbled above the fire and the sea rippled outside. He was laying in his hammock, while Father’s muttering and the embers’ soft crackle rocked him to sleep. He knew Father was praying for luck, good wind, and a big catch. Fish meant life, and the rumble of the sea was its sound, its heartbeat and ceaseless sign.",
+                "text_ES": "ESPANOL VERSION NOT AVAILABLE , BUT ENABLED.  dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        ]
+    },
+    {
+        "slideTitle": "01_DadHouse",
+        "stageElements": [
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen1_background.png",
+                    "top": 0,
+                    "width": "100%",
+                    "height": "100%",
+                    "left": 0
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen1_shade.png",
+                    "left": 0,
+                    "top": 143,
+                    "opacity": 0,
+                    "width": "1024dip",
+                    "height": "522dip"
+                },
+                "animation": {
+                    "duration": 500,
+                    "repeat": 100,
+                    "opacity": 1,
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen1_home.png",
+                    "top": 0,
+                    "width": "100%",
+                    "height": "100%",
+                    "opacity": 1,
+                    "left": 0
+                },
+                "animation": {
+                    "opacity": 0,
+                    "duration": 3000,
+                    "delay": 3000
+                }
+            }
+        ]
+    },
+    {
+        "slideTitle": "01_T_DadHouse",
+        "stageElements": [
+            {
+                "type": "textSlide",
+                "properties": {
+                    "left": 0,
+                    "top": 0
+                },
+                "audio_EN": "02_story_of_the_sea.mp3",
+                "audio_ES": "02_story_of_the_sea.mp3",
+                "text_EN": "When Inori woke in the mornings,\nFather was already out to sea. Inori would run to the beach with rice pies in his pocket to greet the fishermen’s return. These early morning hours were the most magnificent of the day: waiting, the cold sand beneath his feet. Even when the ships were far from the shore, Inori knew how the fishing had gone that day. He saw the boat laden under the weight of the catch, the bent backs of the fishermen and the faint songs from the boat that the wind washed up, onto the beach. And he also saw it in the way his father waved. By the time they reached the shore, he already knew if the sea had been generous that day.",
+                "text_ES": "ESPANOL VERSION NOT AVAILABLE , BUT ENABLED.  dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        ]
+    },
+    {
+        "slideTitle": "02_Boats",
+        "stageElements": [
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen2_background.png",
+                    "top": 0,
+                    "width": "100%",
+                    "height": "100%",
+                    "left": 0
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen2_boats.png",
+                    "right": 0,
+                    "top": 0,
+                    "width": "711dip",
+                    "height": "533dip"
+                },
+                "animation": {
+                    "rotate": -5,
+                    "duration": 3000,
+                    "repeat": 30,
+                    "rotateAxis": "center",
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "transition",
+                "properties": {
+                    "left": 81,
+                    "top": 257,
+                    "width": "335dip",
+                    "height": "357dip"
+                },
+                "images": [
+                    "inori_screen2_inori_sit.png",
+                    "inori_screen2_inori_stand.png"
+                ]
+            }
+        ]
+    },
+    {
+        "slideTitle": "02_T_Boats",
+        "stageElements": [
+            {
+                "type": "textSlide",
+                "properties": {
+                    "left": 0,
+                    "top": 0
+                },
+                "audio_EN": "03_story_of_the_sea.mp3",
+                "audio_ES": "03_story_of_the_sea.mp3",
+                "text_EN": "If the catch was nice, \n the fishermen packed it joyfully. Fish would lay in big baskets in the market, and men gathered to celebrate the day’s luck. Then, Inori often went to swim with Father. They found great pleasure in the living world of the sea, which reflected a rainbow of colors. Often the sea would speak to him. Sometimes, it babbled about remote salt-scented lands, or about the marvelous world between rolling seaweed hills. Now and then it moaned about dark storms.\nLater, they sat on the coast and patched up the fishnet. Inori was proud he could help Father with that. He sewed beautifully.\nAnd then one day, everything changed.",
+                "text_ES": "ESPANOL VERSION NOT AVAILABLE , BUT ENABLED.  dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        ]
+    },
+    {
+        "slideTitle": "03_undersea",
+        "stageElements": [
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen3_waves1.png",
+                    "left": 0,
+                    "top": 0,
+                    "width": "809dip",
+                    "height": "636dip"
+                },
+                "animation": {
+                    "duration": 2000,
+                    "top": "-15",
+                    "delay": 500,
+                    "repeat": 45,
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen3_waves2.png",
+                    "right": 0,
+                    "top": 0,
+                    "width": "654dip",
+                    "height": "768dip"
+                },
+                "animation": {
+                    "duration": 3500,
+                    "right": "-20",
+                    "top": "8",
+                    "repeat": 45,
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen3_fishes1.png",
+                    "left": 166,
+                    "top": 370,
+                    "width": "741dip",
+                    "height": "442dip"
+                },
+                "animation": {
+                    "rotate": 179,
+                    "rotateAxis": "bottomCenter",
+                    "duration": 20000,
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen3_fishes2.png",
+                    "left": 241,
+                    "top": 90,
+                    "width": "682dip",
+                    "height": "212dip"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen3_people_guy2.png",
+                    "left": 409,
+                    "top": 109,
+                    "width": "346dip",
+                    "height": "202dip"
+                },
+                "animation": {
+                    "duration": 2600,
+                    "right": "-20",
+                    "left": 399,
+                    "repeat": 45,
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen3_people_inori.png",
+                    "left": 178,
+                    "top": 270,
+                    "width": "199dip",
+                    "height": "96dip"
+                },
+                "animation": {
+                    "duration": 3500,
+                    "left": 188,
+                    "top": 265,
+                    "repeat": 45,
+                    "autoreverse": "true"
+                }
+            }
+        ]
+    },
+    {
+        "slideTitle": "03_T_undersea",
+        "stageElements": [
+            {
+                "type": "textSlide",
+                "properties": {
+                    "left": 0,
+                    "top": 0
+                },
+                "audio_EN": "04_story_of_the_sea.mp3",
+                "audio_ES": "04_story_of_the_sea.mp3",
+                "text_EN": "On that day,Inori was standing on the coast, as he usually did, but the ships were late. When they finally came into sight, something tore at his heart. They were eerily quiet; the wind carried no sound or call of greeting from the boat, the faces of his father and the fishermen were solemn. That day, there was no market, and no fish either. Men gathered to share a strange silence while patching up the fishnets. Inori joined Father - the net was full of enormous holes as if something had ripped it apart. Repairing the net was long and tedious work. The worst part was that Father did not speak a word. They sat silently beside the net, late into the night, and Inori could not fall asleep easily.",
+                "text_ES": "ESPANOL VERSION NOT AVAILABLE , BUT ENABLED.  dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        ]
+    },
+    {
+        "slideTitle": "04_net",
+        "stageElements": [
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen4_background.png",
+                    "left": 0,
+                    "top": 0,
+                    "width": "100%",
+                    "height": "100%"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen4_fishes.png",
+                    "right": "-250",
+                    "top": 295,
+                    "width": "750dip",
+                    "height": "441dip"
+                },
+                "animation": {
+                    "duration": 45000,
+                    "right": "1300"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen4_net.png",
+                    "left": 0,
+                    "top": 208,
+                    "width": "997dip",
+                    "height": "560dip",
+                    "rotate": -8
+                },
+                "animation": {
+                    "rotate": 8,
+                    "rotateAxis": "topCenter",
+                    "duration": 2500,
+                    "repeat": 20,
+                    "autoreverse": "true"
+                }
+            }
+        ]
+    },
+    {
+        "slideTitle": "04_T_net",
+        "stageElements": [
+            {
+                "type": "textSlide",
+                "properties": {
+                    "left": 0,
+                    "top": 0
+                },
+                "audio_EN": "05_story_of_the_sea.mp3",
+                "audio_ES": "05_story_of_the_sea.mp3",
+                "text_EN": "The next day was quiet, \nand the day after too. Fishermen returned every morning with grave faces, ripped nets, and no fish. The only sounds were the rumble of the sea and the clacking of his father’s beads at dawn.\nOn Saturday the fishermen gathered for a discussion. They sat around Mother’s big bowl of shabu-shabu, dipping their chopsticks into the hot liquid. This untied their anxious knots. Inori nuzzled close to his dad, cheerfully drawing in the smell of hope and serenity. Finally, he learned the cause of the ripped nets and silent fishermen.",
+                "text_ES": "ESPANOL VERSION NOT AVAILABLE , BUT ENABLED.  dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        ]
+    },
+    {
+        "slideTitle": "05_pot",
+        "stageElements": [
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen5_pot.png",
+                    "left": 0,
+                    "top": 0,
+                    "width": "100%",
+                    "height": "100%"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen5_ingredients.png",
+                    "left": "-10",
+                    "top": "-10",
+                    "opacity": 0,
+                    "width": "130%",
+                    "height": "130%"
+                },
+                "animation": {
+                    "duration": 3000,
+                    "opacity": 1,
+                    "delay": 1500,
+                    "width": "100%",
+                    "height": "100%"
+                }
+            }
+        ]
+    },
+    {
+        "slideTitle": "05_T_pot",
+        "stageElements": [
+            {
+                "type": "textSlide",
+                "properties": {
+                    "left": 0,
+                    "top": 0
+                },
+                "audio_EN": "06_story_of_the_sea.mp3",
+                "audio_ES": "06_story_of_the_sea.mp3",
+                "text_EN": "Giant jellyfish had arrived in the bays, creatures never seen before. They were so enormous and heavy that the nets couldn’t be pulled back with them inside. The fish either died or escaped their stings. The fishermen were powerless to stop the jellyfish from tearing the nets apart - yet there were so many, they couldn’t avoid them. If this continued, their families would starve.\nAs they cleaned the last drops of the soup from the bowl, the fishermen fell silent again. Even the oldest could only suggest they prepare themselves for scarcity.",
+                "text_ES": "ESPANOL VERSION NOT AVAILABLE , BUT ENABLED.  dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        ]
+    },
+    {
+        "slideTitle": "06_jellyfish",
+        "stageElements": [
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen6_bkg.png",
+                    "left": 0,
+                    "top": 0,
+                    "width": "100%",
+                    "height": "100%"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen6_waves.png",
+                    "left": 0,
+                    "top": 0,
+                    "width": "100%",
+                    "height": "100%"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen6_seaweed.png",
+                    "left": 48,
+                    "bottom": 0,
+                    "width": "491",
+                    "height": "203"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen6_fishCirle2.png",
+                    "left": "-431",
+                    "top": "349",
+                    "width": "1236",
+                    "height": "1158"
+                },
+                "animation": {
+                    "rotate": "170",
+                    "duration": 95000,
+                    "rotateAxis": "center"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen6_fishCirle2.png",
+                    "left": "264",
+                    "top": "-770",
+                    "width": "1236",
+                    "height": "1158"
+                },
+                "animation": {
+                    "rotate": "170",
+                    "duration": 85000,
+                    "rotateAxis": "center"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen6__jelly_bkgA.png",
+                    "left": "57",
+                    "top": "48",
+                    "width": "867",
+                    "height": "670"
+                },
+                "animation": {
+                    "rotate": "600",
+                    "duration": 50000,
+                    "rotateAxis": "center"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen6__jelly_bkgB.png",
+                    "left": "56",
+                    "top": "378",
+                    "width": "919",
+                    "height": "281"
+                },
+                "animation": {
+                    "top": "380",
+                    "left": "68",
+                    "duration": 10000,
+                    "rotateAxis": "center",
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen6__jelly_bkgC.png",
+                    "left": "218",
+                    "top": "184",
+                    "width": "448",
+                    "height": "329"
+                },
+                "animation": {
+                    "left": "200",
+                    "top": "165",
+                    "duration": 8000,
+                    "repeat": 50,
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen6__jelly_bkgD.png",
+                    "left": "284",
+                    "top": "38",
+                    "width": "412",
+                    "height": "235"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "inori_screen6_jellyFishBig.png",
+                    "left": "-305",
+                    "top": "20",
+                    "width": "656",
+                    "height": "369"
+                },
+                "animation": {
+                    "left": "729",
+                    "top": "710",
+                    "duration": 160000,
+                    "rotate": "15"
+                }
+            }
+        ]
+    },
+    {
+        "slideTitle": "06_T_jellyfish",
+        "stageElements": [
+            {
+                "type": "textSlide",
+                "properties": {
+                    "left": 0,
+                    "top": 0
+                },
+                "audio_EN": "07_story_of_the_sea.mp3",
+                "audio_ES": "07_story_of_the_sea.mp3",
+                "text_EN": "That night Inori couldn’t sleep. A light sea breeze touched his face. He silently slid out of his hammock and put on his coat. Squeezing through the thin opening of the sliding door, he took his father’s rosary beads and ran down to the coast. Sitting down in the sand, he closed his eyes and started crumbling the small beads. The sea roared, the beads rustled, and Inori shook from the cold. Suddenly he heard a distant cry from above. Inori! When Inori looked up, he couldn’t believe his eyes. A strange, colorful contraption appeared from among the clouds. It’s wings seemed to play with the wind. Attached to them was a swing, and on the swing a boy. Moments later the boy stood firmly in front of him. He had almond eyes just like Inori but his skin was butteryellow. My name is Amihan, I am a child of the Wind. Tell me, why are you sitting here alone?",
+                "text_ES": "ESPANOL VERSION NOT AVAILABLE , BUT ENABLED.  dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        ]
+    },
+    {
+        "slideTitle": "07_enterAminah",
+        "stageElements": [
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen7_bkgSand.png",
+                    "left": 0,
+                    "bottom": 0,
+                    "width": "100%",
+                    "height": "100%"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen7_wave3.png",
+                    "left": 0,
+                    "bottom": 0,
+                    "width": "900dip",
+                    "height": "280dip"
+                },
+                "animation": {
+                    "left": "-30",
+                    "duration": 4500,
+                    "repeat": 55,
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen7_wave2.png",
+                    "right": "-10",
+                    "bottom": 10,
+                    "width": "809dip",
+                    "height": "218dip"
+                },
+                "animation": {
+                    "right": "30",
+                    "duration": 5100,
+                    "repeat": 55,
+                    "autoreverse": "true",
+                    "delay": "500"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen7_wave1.png",
+                    "left": 0,
+                    "bottom": 0,
+                    "width": "1024dip",
+                    "height": "210dip"
+                },
+                "animation": {
+                    "bottom": -10,
+                    "rotateAxis": "topCenter",
+                    "duration": 6000,
+                    "repeat": 55,
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "transition",
+                "properties": {
+                    "left": 358,
+                    "top": 144,
+                    "width": 266,
+                    "height": 401
+                },
+                "images": [
+                    "inori_screen7_inori_sitting.png",
+                    "inori_screen7_inori_stand.png"
+                ]
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen7_cloud.png",
+                    "left": 350,
+                    "top": 38,
+                    "width": "538dip",
+                    "height": "153dip"
+                },
+                "animation": {
+                    "left": 0,
+                    "duration": 25000,
+                    "repeat": 5,
+                    "autoreverse": "true",
+                    "delay": 1800
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen7_amihan.png",
+                    "right": 0,
+                    "top": 0,
+                    "width": "324dip",
+                    "height": "361dip"
+                },
+                "animation": {
+                    "rotate": 15,
+                    "rotateAxis": "topCenter",
+                    "duration": 3000,
+                    "repeat": 25,
+                    "autoreverse": "true"
+                }
+            }
+        ]
+    },
+    {
+        "slideTitle": "07_T_enterAminah",
+        "stageElements": [
+            {
+                "type": "textSlide",
+                "properties": {
+                    "left": 0,
+                    "top": 0
+                },
+                "audio_EN": "08_story_of_the_sea.mp3",
+                "audio_ES": "08_story_of_the_sea.mp3",
+                "text_EN": "Inori felt puzzled by the sudden arrival of this stranger. But he heard himself briefly explaining about Father, the fishing and the jellyfish. And that he came out tonight to pray. Amihan fell in thought for a moment. Inori, the jellyfish are creatures of the sea, just like other fish. They are no enemy, but they are here for a reason. I can help you find the reason, if you come with me. But we have to leave with the next wind. Inori felt suddenly determined and grabbed the swing. Let's go. But Amihan, how did you find me? I just let the wind blow me, and it always takes me to friends. Amihan winked, as he stretched the colorful sails against the wind and they took off.",
+                "text_ES": "ESPANOL VERSION NOT AVAILABLE , BUT ENABLED.  dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        ]
+    },
+    {
+        "slideTitle": "08_friends",
+        "stageElements": [
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen8_bkg.png",
+                    "left": 0,
+                    "top": 0,
+                    "width": "100%",
+                    "height": "100%"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen8_bamboo.png",
+                    "left": 6,
+                    "top": 269,
+                    "width": "448dip",
+                    "height": "383dip"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen8_amihan.png",
+                    "left": 638,
+                    "top": 262,
+                    "width": "294dip",
+                    "height": "427dip"
+                },
+                "animation": {
+                    "duration": 4000,
+                    "left": 628,
+                    "delay": "1000"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen8_inori.png",
+                    "left": 357,
+                    "top": 270,
+                    "width": "272dip",
+                    "height": "429dip"
+                },
+                "animation": {
+                    "duration": 4000,
+                    "left": 377,
+                    "delay": "1000"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen8_blue_bubble.png",
+                    "left": 735,
+                    "top": 16,
+                    "width": "253dip",
+                    "height": "257dip",
+                    "opacity": 0
+                },
+                "animation": {
+                    "opacity": "1",
+                    "duration": 3000,
+                    "delay": "3000"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen8_bubble_green.png",
+                    "left": 289,
+                    "top": 13,
+                    "width": 224,
+                    "height": 275,
+                    "opacity": 0
+                },
+                "animation": {
+                    "opacity": "1",
+                    "duration": 3000,
+                    "delay": "3000"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen8_jelly_boat.png",
+                    "left": 808,
+                    "top": 11,
+                    "width": "176dip",
+                    "height": "174dip",
+                    "opacity": 0
+                },
+                "animation": {
+                    "opacity": "1",
+                    "duration": 3000,
+                    "delay": "4000"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen8_jellyfisn.png",
+                    "left": 188,
+                    "top": 30,
+                    "width": "258dip",
+                    "height": "141dip",
+                    "opacity": 0
+                },
+                "animation": {
+                    "opacity": "1",
+                    "duration": 3000,
+                    "delay": "4000"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen8_wave2.png",
+                    "left": 0,
+                    "bottom": 0,
+                    "width": "893dip",
+                    "height": "157dip"
+                },
+                "animation": {
+                    "left": "-30",
+                    "duration": 8000,
+                    "repeat": 5,
+                    "autoreverse": "true"
+                }
+            },
+            {
+                "type": "image",
+                "properties": {
+                    "image": "Inori_screen8_wave_front.png",
+                    "left": 0,
+                    "bottom": 0,
+                    "width": "1024dip",
+                    "height": "107dip"
+                }
+            }
+        ]
+    },
+    {
+        "slideTitle": "08_T_friends",
+        "stageElements": [
+            {
+                "type": "textSlide",
+                "properties": {
+                    "left": 0,
+                    "top": 0
+                },
+                "audio_EN": "08_story_of_the_sea.mp3",
+                "audio_ES": "08_story_of_the_sea.mp3",
+                "text_EN": "They flew through day and night, above sea and land. Amihan came to his element when riding the winds and navigating the clouds. Amihan didn’t speak much, he mostly just laughed while Inori held on to the strings desperately paralyzed by the height and the speed. He stared down on landscapes passing by below vast grasslands and agricultural fields, snowcapped mountains and blue waters. A day came when as they were flying over a vast brown desert Inori noticed a long blue snake. The Nile. said Amihan the longest river in the World. The wind carried them closer to the surface, and Inori got lost looking into Amihan’s telescope, the enormous river enchanted him. Suddenly as he was exploring the shore he noticed a girl running through the sands in the distance, waving towards them. Amihan, look! I think she’s asking for help. Let’s find out said Amihan, and directed the swing towards the girl. I think she is chased by a group of men. Hurry! Amihan started to laugh: Don’t worry much. I believe it’s my friend, Kusini. Throw down the rope, we pick her up.",
+                "text_ES": "ESPANOL VERSION NOT AVAILABLE , BUT ENABLED.  dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        ]
+    }
+]
