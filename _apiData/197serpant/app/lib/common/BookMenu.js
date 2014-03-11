@@ -1,36 +1,137 @@
-function PedalMenu(_titleTarget , _textTarget){
-
-	this.screenTitle = _titleTarget;
-	this.screenText = _textTarget;
-
-
-	////add the main container
-
-	var cirContainer = Ti.UI.createImageView({
-		image:"/bookshelf/bookshelf_pedalMenu_container.png",
-		left:0,
-		bottom:0,
-		width:512,
-		height:517,
-		touchEnabled:false,
-		zIndex:1
-	})
-
-	var petaloContainer = Ti.UI.createView({width:700, height:700, bottom:0, left:0})
-		petaloContainer.add(cirContainer);
-
-	this.pedalContainerView = petaloContainer;
-
-	this.createPedals();
-
+function BookMenu(_planetID){
 	
-	return this.pedalContainerView ; //this.createPedals();
+	//this.screenTitle = _titleTarget;
+	//this.screenText = _textTarget;
+
+	this.menuTable = Ti.UI.createTableView({
+	  backgroundColor:'white',
+	  width:200,
+	  top:0,
+	  left: 0,
+	  height: 200
+	});
+
+	this.parseJsonDoc(_planetID);
+
+
 }
 
-PedalMenu.prototype.screenTitle;
-PedalMenu.prototype.screenText;
 
-PedalMenu.prototype.createPedals = function (){
+BookMenu.prototype.getTable = function() {
+	
+	return this.menuTable;
+
+};
+BookMenu.prototype.menuTable
+
+/**
+	Check the menu map file for this planet exists
+	if is available return menu data
+	otherwise return false
+**/
+BookMenu.prototype.parseJsonDoc = function(_ID) {
+
+	// retrieve and read the file
+		var _URL =  Alloy.Globals.storyFolderRoot + "bookshelfData/" + _ID + "_menu.json";
+		var file = Titanium.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, _URL);
+		var data = file.read()
+
+	/// parse data if available
+
+		if(data.text==""){
+			Ti.API.info("error reading JSON file for menu");
+			this.jsonData = false;
+		}else{
+			this.jsonData = JSON.parse(data.text);
+		}
+	
+	/// now that have data from file, render the menu
+
+		this.populateTable();
+
+};
+
+
+/**
+	populate the menu using data from json file
+**/
+BookMenu.prototype.populateTable = function() {
+
+	var tableData = [];
+
+	for (var i = 0; i < this.jsonData.length; i++) {
+		this.jsonData[i]
+		
+		var row = Ti.UI.createTableViewRow({
+			className:'bookItem', // used to improve table performance
+			selectedBackgroundColor:'transparent',
+			rowIndex:i, // custom property, useful for determining the row during events
+			height:298
+		});
+
+
+		var labelUserName = Ti.UI.createLabel({
+				color:'#576996',
+				font:{fontFamily:'Arial', fontSize:20, fontWeight:'bold'},
+				text: this.jsonData[i].storyID ,
+				left:70, 
+				top: 6,
+				width:200,
+				height: 30
+			});
+		row.add(labelUserName);
+
+
+		tableData.push(row);
+
+	};
+	/*
+	for (var i=1; i<=10; i++){
+		var row = Ti.UI.createTableViewRow({
+			className:'forumEvent', // used to improve table performance
+			selectedBackgroundColor:'red',
+			rowIndex:i, // custom property, useful for determining the row during events
+			height:110
+		});
+
+		var labelUserName = Ti.UI.createLabel({
+				color:'#576996',
+				font:{fontFamily:'Arial', fontSize:20, fontWeight:'bold'},
+				text:'Fred Smith ' + i,
+				left:70, 
+				top: 6,
+				width:200,
+				height: 30
+			});
+		row.add(labelUserName);
+
+		tableData.push(row);
+	}
+	*/
+
+
+	this.menuTable.data = tableData;
+
+};
+
+
+
+
+BookMenu.prototype.clear = function() {
+	
+	this.removeEventListener('jsonReady', this.populateTable );
+
+};
+
+
+
+
+
+
+
+
+
+BookMenu.prototype.createPedals = function (){
 
 	var petalos = this.parseJSON('json/pedals.json');
 
@@ -82,7 +183,7 @@ PedalMenu.prototype.createPedals = function (){
 	
 }
 
-PedalMenu.prototype.createPedalItem = function(_pedalInfo, _targetParent) {
+BookMenu.prototype.createPedalItem = function(_pedalInfo, _targetParent) {
 	
 	/*
 		var petalo = Ti.UI.createImageView({image:imagenPetaloBase});
@@ -190,10 +291,10 @@ PedalMenu.prototype.createPedalItem = function(_pedalInfo, _targetParent) {
 
 };
 
-PedalMenu.prototype.mostrarTexto = function (){	
+BookMenu.prototype.mostrarTexto = function (){	
 }
 
-PedalMenu.prototype.rotatePedals = function(){
+BookMenu.prototype.rotatePedals = function(){
 
 		 
 	// define transform matrix for short planets
@@ -228,15 +329,6 @@ PedalMenu.prototype.rotatePedals = function(){
 };
 
 
-PedalMenu.prototype.parseJSON = function(_URL) {
 
 
-	var file = Titanium.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, _URL);
-	var data = file.read()//.text;
-	var json = JSON.parse(data.text);
-
-
-	return json;
-};
-
-module.exports = PedalMenu;
+module.exports = BookMenu;

@@ -1,20 +1,15 @@
 <Alloy>
-	<Window class="container" onOpen="playLoopAudio" onClose="stopLoopAudio"> 
+	<!-- 
+		<Window class="container" onOpen="playLoopAudio" onClose="stopLoopAudio"> 
 
+		<View id="planetImage"></View>
 
-		
-
-		<Label id="MainTitle">Legend of the north</Label>
+<Label id="MainTitle">Legend of the north</Label>
 
 
 		<Label id="descriptionText"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </Label>
 
 
-		<View id="planetImage"></View>
-
-
-
-		
 
 		<View  id="bookshelf_slide"> </View>
 
@@ -43,6 +38,21 @@
 		</View>
 		
 	 	<ImageView image="/bookshelf/bookshelf_buton_play.png" id="bookshelf_play" > </ImageView>
+	-->
+	<Window class="container"> 
+	
+		<View id="contentSelect">			
+		</View>
+
+
+		<View id="">
+
+		</View>
+
+		<Button onClick="closeBookshelf">
+			CLOSE
+		</Button>
+		
 		
 		
 	</Window>
