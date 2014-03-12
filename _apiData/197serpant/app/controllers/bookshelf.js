@@ -3,6 +3,7 @@ var currentItem = args.currentItem;
 
 //var SlideShow = require('/common/SlideShow');
 var BookMenu = require('/common/BookMenu');
+var BookDetails = require('/common/BookDetails');
 
 var _menu
 
@@ -27,6 +28,8 @@ $.bookshelf.addEventListener('showBookDetails', showDetails)
 function closeBookshelf(){
 
 		// clear Screen
+		$.bookshelf.removeEventListener('showBookDetails', showDetails)
+
 		$.bookshelf.removeAllChildren()
 		BookMenu = null
 		_menu = null
@@ -41,7 +44,11 @@ function closeBookshelf(){
 
 /// show book details
 function showDetails(e){
-	alert(e.bookTitle + "yolo")
+	alert(e.bookData)
+	var bookDetails = new BookDetails(e.bookData);
+
+	$.bookshelf.add( bookDetails.getContainer() )
+
 }
 /*
 	var _slideshow;

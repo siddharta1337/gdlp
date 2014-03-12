@@ -1,45 +1,46 @@
-"lastUpdate":"2014/3/11",
-[
-    {
-        "storyID": "20140311_1",
-        "thumb_en":"20140311_1_en.png",
-        "thumb_es":"20140311_1_es.png",
-        "free":"true"
-    },
-    {
-        "storyID": "20140311_2",
-        "thumb_en":"20140311_2_en.png",
-        "thumb_es":"20140311_2_es.png"
-    },
-    {
-        "storyID": "20140311_3",
-        "thumb_en":"20140311_3_en.png",
-        "thumb_es":"20140311_3_es.png"
-    },
-    {
-        "storyID": "20140311_4",
-        "thumb_en":"20140311_4_en.png",
-        "thumb_es":"20140311_4_es.png"
-    },
-    {
-        "storyID": "20140311_5",
-        "thumb_en":"20140311_5_en.png",
-        "thumb_es":"20140311_5_es.png"
-    },
-    {
-        "storyID": "20140311_6",
-        "thumb_en":"20140311_6_en.png",
-        "thumb_es":"20140311_6_es.png"
-    },
-    {
-        "storyID": "20140311_7",
-        "thumb_en":"20140311_7_en.png",
-        "thumb_es":"20140311_7_es.png"
-    },
-    {
-        "storyID": "20140311_8",
-        "thumb_en":"20140311_8_en.png",
-        "thumb_es":"20140311_8_es.png"
-    }
-    
-]
+{
+    "lastUpdate": "2014/3/11",
+    "data": [
+        {
+            "storyID": "20140311_1",
+            "thumb_en": "20140311_1_en.png",
+            "thumb_es": "20140311_1_es.png",
+            "free": "true"
+        },
+        {
+            "storyID": "20140311_2",
+            "thumb_en": "20140311_2_en.png",
+            "thumb_es": "20140311_2_es.png"
+        },
+        {
+            "storyID": "20140311_3",
+            "thumb_en": "20140311_3_en.png",
+            "thumb_es": "20140311_3_es.png"
+        },
+        {
+            "storyID": "20140311_4",
+            "thumb_en": "20140311_4_en.png",
+            "thumb_es": "20140311_4_es.png"
+        },
+        {
+            "storyID": "20140311_5",
+            "thumb_en": "20140311_5_en.png",
+            "thumb_es": "20140311_5_es.png"
+        },
+        {
+            "storyID": "20140311_6",
+            "thumb_en": "20140311_6_en.png",
+            "thumb_es": "20140311_6_es.png"
+        },
+        {
+            "storyID": "20140311_7",
+            "thumb_en": "20140311_7_en.png",
+            "thumb_es": "20140311_7_es.png"
+        },
+        {
+            "storyID": "20140311_8",
+            "thumb_en": "20140311_8_en.png",
+            "thumb_es": "20140311_8_es.png"
+        }
+    ]
+}
