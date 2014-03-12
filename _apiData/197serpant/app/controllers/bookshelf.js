@@ -20,6 +20,8 @@ function init(){
 
 $.bookshelf.addEventListener('open', init)
 
+$.bookshelf.addEventListener('showBookDetails', showDetails)
+
 
 /// close the window and release memory
 function closeBookshelf(){
@@ -37,6 +39,10 @@ function closeBookshelf(){
 }
 
 
+/// show book details
+function showDetails(e){
+	alert(e.bookTitle + "yolo")
+}
 /*
 	var _slideshow;
 	var	_pedals;

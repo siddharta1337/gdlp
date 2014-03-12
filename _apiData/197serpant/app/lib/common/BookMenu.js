@@ -3,25 +3,23 @@ function BookMenu(_planetID){
 	//this.screenTitle = _titleTarget;
 	//this.screenText = _textTarget;
 
-	this.menuTable = Ti.UI.createTableView({
-	  backgroundColor:'white',
-	  width:200,
+	this.menuTable = Ti.UI.createScrollView({
+	  width:550,
 	  top:0,
-	  left: 0,
-	  height: 200
+	  left: 50,
+	  height: 600
 	});
 
 	this.parseJsonDoc(_planetID);
 
-
+	this.menuTable.addEventListener('selectedBook', this.selectedBookHandler);
 }
 
 
-BookMenu.prototype.getTable = function() {
-	
+BookMenu.prototype.getTable = function() {	
 	return this.menuTable;
-
 };
+
 BookMenu.prototype.menuTable
 
 /**
@@ -44,7 +42,7 @@ BookMenu.prototype.parseJsonDoc = function(_ID) {
 		}else{
 			this.jsonData = JSON.parse(data.text);
 		}
-	
+
 	/// now that have data from file, render the menu
 
 		this.populateTable();
@@ -52,37 +50,63 @@ BookMenu.prototype.parseJsonDoc = function(_ID) {
 };
 
 
+BookMenu.prototype.selectedBookHandler = function(e) {
+	//alert("selected" + e.bookTitle)
+
+	var evtData = {
+		bookTitle:e.bookTitle
+	}
+	
+	e.source.getParent().fireEvent("showBookDetails",evtData);
+
+	
+
+	//
+};
+
 /**
 	populate the menu using data from json file
 **/
 BookMenu.prototype.populateTable = function() {
 
 	var tableData = [];
+	var topPos = 0;
+	var rowCount
 
-	for (var i = 0; i < this.jsonData.length; i++) {
-		this.jsonData[i]
-		
-		var row = Ti.UI.createTableViewRow({
-			className:'bookItem', // used to improve table performance
-			selectedBackgroundColor:'transparent',
-			rowIndex:i, // custom property, useful for determining the row during events
-			height:298
+
+	for (var i = 0; i < this.jsonData.data.length; i++) {
+
+		var row = Ti.UI.createImageView({
+			width:225,
+			height:297,
+			top: topPos,
+			image: Alloy.Globals.storyFolderRoot + "bookshelfData/thumbnails/" + this.jsonData.data[i].thumb_en 
 		});
 
 
-		var labelUserName = Ti.UI.createLabel({
-				color:'#576996',
-				font:{fontFamily:'Arial', fontSize:20, fontWeight:'bold'},
-				text: this.jsonData[i].storyID ,
-				left:70, 
-				top: 6,
-				width:200,
-				height: 30
-			});
-		row.add(labelUserName);
+		/// set rows position
+			if ((i%2) == 0 ){
+				row.left = 0
+			}else{
+				row.left = 250
+				topPos = topPos + 310;
+			}
+
+		row.storyID = this.jsonData.data[i].storyID
+		/// attach Events
+
+		row.addEventListener('click', function(e){
+
+			 var evtData = {
+				bookTitle:e.source.storyID
+			}
+			
+			e.source.getParent().fireEvent("selectedBook",evtData);
 
 
-		tableData.push(row);
+		})
+
+		this.menuTable.add(row);
 
 	};
 	/*
@@ -109,9 +133,6 @@ BookMenu.prototype.populateTable = function() {
 	}
 	*/
 
-
-	this.menuTable.data = tableData;
-
 };
 
 
@@ -120,6 +141,7 @@ BookMenu.prototype.populateTable = function() {
 BookMenu.prototype.clear = function() {
 	
 	this.removeEventListener('jsonReady', this.populateTable );
+	this.menuTable.removeEventListener('selectedBook', this.selectedBookHandler);
 
 };
 
