@@ -3,7 +3,7 @@
     "data": [
         {
             "storyID": "20140311_1",
-            "storyTitle": "The Story of the sea/nPart 1",
+            "storyTitle": "The Story of the sea\nPart 1",
             "thumb_en": "20140311_1_en.png",
             "thumb_es": "20140311_1_es.png",
             "free": "true",
@@ -16,8 +16,8 @@
             "intro_es": "SPANISH TEXT Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
         },
         {
-            "storyID": "20140311_2",
-            "storyTitle": "The Story of the sea/nPart 1",
+            "storyID": "20140311_1",
+            "storyTitle": "The Story of the sea\nPart 2",
             "thumb_en": "20140311_2_en.png",
             "thumb_es": "20140311_2_es.png",
             "slideshow": [
@@ -29,8 +29,8 @@
             "intro_es": "SPANISH TEXT Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
         },
         {
-            "storyID": "20140311_3",
-            "storyTitle": "The Story of the sea/nPart 1",
+            "storyID": "20140311_1",
+            "storyTitle": "The Story of the sea\nPart 3",
             "thumb_en": "20140311_3_en.png",
             "thumb_es": "20140311_3_es.png",
             "slideshow": [
@@ -42,8 +42,8 @@
             "intro_es": "SPANISH TEXT Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
         },
         {
-            "storyID": "20140311_4",
-            "storyTitle": "The Story of the sea/nPart 1",
+            "storyID": "20140311_1",
+            "storyTitle": "The Story of the sea\nPart 10",
             "thumb_en": "20140311_4_en.png",
             "thumb_es": "20140311_4_es.png",
             "slideshow": [
@@ -55,8 +55,8 @@
             "intro_es": "SPANISH TEXT Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
         },
         {
-            "storyID": "20140311_5",
-            "storyTitle": "The Story of the sea/nPart 1",
+            "storyID": "20140311_1",
+            "storyTitle": "Another Story",
             "thumb_en": "20140311_5_en.png",
             "thumb_es": "20140311_5_es.png",
             "slideshow": [
@@ -68,8 +68,8 @@
             "intro_es": "SPANISH TEXT Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
         },
         {
-            "storyID": "20140311_6",
-            "storyTitle": "The Story of the sea/nPart 1",
+            "storyID": "20140311_1",
+            "storyTitle": "Lorem Ipsum",
             "thumb_en": "20140311_6_en.png",
             "thumb_es": "20140311_6_es.png",
             "slideshow": [
@@ -81,8 +81,8 @@
             "intro_es": "SPANISH TEXT Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
         },
         {
-            "storyID": "20140311_7",
-            "storyTitle": "The Story of the sea/nPart 1",
+            "storyID": "20140311_1",
+            "storyTitle": "Lorem Ipsum",
             "thumb_en": "20140311_7_en.png",
             "thumb_es": "20140311_7_es.png",
             "slideshow": [
@@ -94,8 +94,8 @@
             "intro_es": "SPANISH TEXT Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
         },
         {
-            "storyID": "20140311_8",
-            "storyTitle": "The Story of the sea/nPart 1",
+            "storyID": "20140311_1",
+            "storyTitle": "Lorem Ipsum",
             "thumb_en": "20140311_8_en.png",
             "thumb_es": "20140311_8_es.png",
             "slideshow": [

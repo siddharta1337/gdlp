@@ -10,7 +10,7 @@ var Slide = require('/common/StorySlide');
 function StoryBuilder(_storyID){
 
 	/// parse data
-	var _data = this.parseJSON('json/story'+ _storyID +'.json');
+	var _data = this.parseJSON('json/'+ _storyID +'.json');
 	
 	/// create slide class
 	this._slides = []; //Ti.UI.createView()
@@ -44,9 +44,7 @@ StoryBuilder.prototype.getSlides = function() {
 StoryBuilder.prototype.clean = function() {
 	
 	for (var i = 0; i < this._slides.length; i++) {
-
 		this._slides[i].clean()
-
 	};
 };
 
