@@ -19,6 +19,7 @@ Alloy.Globals.rotateInterno = Ti.UI.create2DMatrix().rotate(49).scale(2, 2);
 Alloy.Globals.rotateReset= Ti.UI.create2DMatrix().rotate(0);
 
 Alloy.Globals.storyFolderRoot = "/storyAssets/"
+Alloy.Globals.remoteServerRoot = "http://revolucion.mobi/test/"
 
 //if(1 = 1) {
 

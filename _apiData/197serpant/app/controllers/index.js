@@ -392,6 +392,15 @@ function cleanUp(_action){
 	}
 }
 
+function valiDATE(){
+
+	if ( Ti.App.Properties.getString('lastUpdate') == null ){
+		Ti.App.Properties.setString('lastUpdate', "March 13, 2014 11:36");
+		alert( Ti.App.Properties.getString('lastUpdate') )
+	}
+}
+
+valiDATE()
 
 alignPlanets();
 
@@ -412,4 +421,104 @@ Ti.App.addEventListener('backPlanet',function(e){
 	_flagPlanetIsMoving = true;
 })
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //// TESTING TESTING DELETE DELETE HERE BE DRAGONS!
+var FileDownloader = require('/common/FileDownloader');
+
+function checkLastUpdate(){
+
+
+}
+
+
+
+function downloadFile(){
+
+	var _download = new FileDownloader();
+
+		_download.checkLastUpdate(chapo)
+
+		function chapo(e){
+			alert(e)
+		}
+
+
+/*
+	var _download = new FileDownloader()
+
+
+	var queue = [
+					{'filepath' : Titanium.Filesystem.applicationDataDirectory+"chapi1.png" , 'url': 'http://revolucion.mobi/test/titanium.png'},
+					{'filepath' : Titanium.Filesystem.applicationDataDirectory+"chapi2.png" , 'url': 'http://revolucion.mobi/test/titanium.png'},
+					{'filepath' : Titanium.Filesystem.applicationDataDirectory+"chapi3.png" , 'url': 'http://revolucion.mobi/test/titanium.png'}
+				]
+
+	//this.downloadOneFile('http://revolucion.mobi/test/titanium.png', Titanium.Filesystem.applicationDataDirectory+"chapi.png" , fileListo);
+	_download.downloadMultiFile(queue, fileListo, todosArchivos)
+
+	function fileListo(e){
+		alert(e)
+		nepeView.borderWidth = 3;
+		nepeView.borderColor = "#ff00ff";
+		nepeView.image = e.path;
+			
+	}
+
+	function todosArchivos(e){
+		alert(e);
+	}
+
+	var nepeView = Ti.UI.createImageView({
+		width:200,
+		height:200
+	})
+
+
+	$.index.add(nepeView)
+*/	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
