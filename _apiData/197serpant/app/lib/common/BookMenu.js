@@ -19,6 +19,8 @@ function BookMenu(_planetID){
 	this.menuContainer.addEventListener('selectedBook', this.selectedBookHandler);
 }
 
+var FileDownloader = require('/common/FileDownloader');
+
 BookMenu.prototype.menuContainer
 
 /// inner methods
@@ -33,7 +35,6 @@ BookMenu.prototype.menuContainer
 	};
 
 
-
 	/**
 		Check the menu map file for this planet exists
 		if is available return menu data
@@ -42,8 +43,8 @@ BookMenu.prototype.menuContainer
 	BookMenu.prototype.parseJsonDoc = function(_ID) {
 
 		// retrieve and read the file
-			var _URL =  Alloy.Globals.storyFolderRoot + "bookshelfData/" + _ID + "_menu.json";
-			var file = Titanium.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, _URL);
+			var _URL = "bookshelfData/" + _ID + "_menu.json";
+			var file = Titanium.Filesystem.getFile( Titanium.Filesystem.applicationDataDirectory , _URL);
 			var data = file.read()
 
 		/// parse data if available

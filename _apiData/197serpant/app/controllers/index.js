@@ -3,7 +3,7 @@ function doClick(e) {
     alert($.label.text);
 }
 */
-
+var FileDownloader = require('/common/FileDownloader');
 
 var player;
 var _flagPlanetIsMoving = false;
@@ -392,18 +392,7 @@ function cleanUp(_action){
 	}
 }
 
-function valiDATE(){
-
-	if ( Ti.App.Properties.getString('lastUpdate') == null ){
-		Ti.App.Properties.setString('lastUpdate', "March 13, 2014 11:36");
-		alert( Ti.App.Properties.getString('lastUpdate') )
-	}
-}
-
-valiDATE()
-
-alignPlanets();
-
+ 
 
 //// OPEN THE VIEW
 $.index.open({
@@ -412,6 +401,62 @@ $.index.open({
 	exitOnClose : false
 });
 
+
+$.index.addEventListener('open', init);
+
+
+/// initialize the whole app
+function init(){
+
+	/// Define a base last update if there's none.
+	/// This line only runs once in the app's lifetime
+	if ( Ti.App.Properties.getString('lastUpdate') == null ){
+		Ti.App.Properties.setString('lastUpdate', "March 13, 2014 11:36");
+	}
+
+	///system folder creation
+	///-----
+	/// set up all base folders
+	/// this line only runs once in the apps's lifetime
+		var imageDir = Ti.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory , 'bookshelfData');
+		if (! imageDir.exists()) {
+		    imageDir.createDirectory();
+		}
+
+
+
+	var downloader = new FileDownloader();
+
+
+
+	////// update bookshelf menu if needed
+		/// download update file and read it
+		downloader.checkUpdate(updateMenu)
+
+		function updateMenu(updateNeeded){
+
+			if(updateNeeded){
+					var menuFiles = [
+						"bookshelfData/east_menu.json",
+						"bookshelfData/north_menu.json",
+						"bookshelfData/south_menu.json",
+						"bookshelfData/west_menu.json"
+					]
+					var list = downloader.makeQueue(menuFiles , "bookshelfData");
+
+						downloader.downloadMultiFile(list ,filesReady, filesReady)
+			}
+		}
+
+		function filesReady(){
+			//menu files are ready
+		}
+
+
+
+	/// align planets
+		alignPlanets();
+}
  
 
 Ti.App.addEventListener('backPlanet',function(e){
@@ -420,32 +465,6 @@ Ti.App.addEventListener('backPlanet',function(e){
 	///after proces are done, enable this view
 	_flagPlanetIsMoving = true;
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- //// TESTING TESTING DELETE DELETE HERE BE DRAGONS!
-var FileDownloader = require('/common/FileDownloader');
-
-function checkLastUpdate(){
-
-
-}
-
 
 
 function downloadFile(){

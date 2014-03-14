@@ -96,9 +96,13 @@ FileDownloader.prototype.downloadMultiFile = function(downloadQueue, callBack_Do
 };
 
 /**
-verify the last update of the app
-**/
-FileDownloader.prototype.checkLastUpdate = function(_callback){
+ * Verify the last update of the app and send calculation result to callback
+ * Paramaters
+ * _callback: Function
+ * 		return: true if update is needed or false if not.
+ * 
+ */
+FileDownloader.prototype.checkUpdate = function(_callback){
 
 	//this.downloadOneFile(Alloy.Globals.remoteServerRoot+'lastUpdate.json', Titanium.Filesystem.applicationDataDirectory+"chapi.png" , fileListo);
 	
@@ -117,9 +121,13 @@ FileDownloader.prototype.checkLastUpdate = function(_callback){
 	        var localDate = new Date( Ti.App.Properties.getString('lastUpdate') )
 
 	        if(  serverDate.getTime() > localDate.getTime()  ){
-	        	alert( "actualizar" )
+	        	/// update is needed
+	        	_callback(true)
+	        	alert(serverDate)
+	        	//Ti.App.Properties.setString('lastUpdate', "March 13, 2014 11:36");
 	        }else{
-	        	alert("no actualiar")
+	        	// no update needed
+	        	_callback(false)
 	        }
 	        
 	        //_callback(json);
@@ -133,6 +141,31 @@ FileDownloader.prototype.checkLastUpdate = function(_callback){
 	// Send the request.
 	xhr.send();
 }
+/**
+ * Create a valide queue object
+ * PARAMETERS: 
+ * 		-  _array : all files to be downloaded
+ *		-  _folder: where the files will be placed
+ * 	
+ */
+FileDownloader.prototype.makeQueue = function(_array , _folder) {
+
+	var result = []
+
+	/// verify if param _array is a valid Array
+	if ( _array instanceof Array){
+		
+		for (var i = 0; i < _array.length; i++) {
+			result.push( {"filepath" : Titanium.Filesystem.applicationDataDirectory + _array[i]  , "url": Alloy.Globals.remoteServerRoot + _array[i] } );
+		};
+
+		//Alloy.Globals.remoteServerRoot + 
+	}else{
+		Ti.API.info("ERROR: parameter is not a valid array")
+	}
+
+	return result
+};
 
 
 module.exports = FileDownloader;
