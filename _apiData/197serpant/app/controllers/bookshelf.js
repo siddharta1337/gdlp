@@ -16,6 +16,9 @@ function init(){
 	//alert(args.currentItem.id )
 	_menu = new BookMenu( args.currentItem.id );
 
+	var loader =  _menu.getPreloader()
+	$.bookshelf.add(loader)
+
 	_menu.loadThumbnails( thumbsLoaded )
 
 	$.bookshelf.add( _menu.getTable() );
@@ -31,7 +34,11 @@ function init(){
 
 
 			bookDetails = new BookDetails();
+			
+			$.bookshelf.remove(loader)
+
 			$.bookshelf.add( bookDetails.getContainer() )
+
 
 	}
 

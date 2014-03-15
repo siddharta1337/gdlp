@@ -1,6 +1,8 @@
 function FileDownloader(){
 }
 
+FileDownloader.prototype.mainLoader
+
 /**
  * Make and http call and save the result into a file.
  * 
@@ -167,5 +169,25 @@ FileDownloader.prototype.makeQueue = function(_array , _folder) {
 	return result
 };
 
+FileDownloader.prototype.getPreloader = function() {
+
+	
+	this.mainLoader = Ti.UI.createView({
+		zIndex:100,
+		backgroundColor:"#00ff00",
+		width:"100%",
+		height:"100%"
+	})
+
+	this.bar = Ti.UI.createView({
+		backgroundColor:"#FF0000",
+		width:100,
+	})
+
+	return  this.mainLoader;
+};
+
+FileDownloader.prototype.startloader = function() {
+};
 
 module.exports = FileDownloader;
