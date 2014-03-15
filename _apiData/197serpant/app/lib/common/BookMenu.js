@@ -25,6 +25,32 @@ BookMenu.prototype.menuContainer
 
 /// inner methods
 
+	BookMenu.prototype.loadThumbnails = function(_callbackThumbsLoaded) {
+		
+
+		var thumbnailsList = []
+
+		for (var i = 0; i < this.jsonData.data.length; i++) {
+			/// select the thumbnail according to the language
+			var lang_sufix = (Titanium.Locale.currentLanguage=="en")? this.jsonData.data[i].thumb_en : this.jsonData.data[i].thumb_es;
+			thumbnailsList.push ( "bookshelfData/" + lang_sufix )
+		};
+		alert("gaver")
+		alert(thumbnailsList)
+
+		var downloader = new FileDownloader()
+
+		var list = downloader.makeQueue( thumbnailsList , "bookshelfData");
+
+			downloader.downloadMultiFile(list ,function(){/*fileprogres*/}, _callbackThumbsLoaded)
+
+
+
+
+
+	};
+
+
 	/**
 
 		return the menu container
@@ -58,7 +84,7 @@ BookMenu.prototype.menuContainer
 
 		/// now that have data from file, render the menu
 
-			this.populateTable();
+			
 	};
 
 
@@ -79,9 +105,8 @@ BookMenu.prototype.menuContainer
 				width:225,
 				height:297,
 				top: topPos,
-				image: Alloy.Globals.storyFolderRoot + "bookshelfData/thumbnails/" + this.jsonData.data[i].thumb_en 
+				image: Titanium.Filesystem.applicationDataDirectory + "bookshelfData/" + this.jsonData.data[i].thumb_en 
 			});
-
 
 			/// set rows position
 				if ((i%2) == 0 ){

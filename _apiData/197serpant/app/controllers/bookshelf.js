@@ -16,13 +16,26 @@ function init(){
 	//alert(args.currentItem.id )
 	_menu = new BookMenu( args.currentItem.id );
 
+	_menu.loadThumbnails( thumbsLoaded )
+
 	$.bookshelf.add( _menu.getTable() );
 
-	$.bookshelf.removeEventListener('open', init)
+	function thumbsLoaded (){
+
+		
+			_menu.populateTable();
+
+			
+
+			$.bookshelf.removeEventListener('open', init)
 
 
-	bookDetails = new BookDetails();
-	$.bookshelf.add( bookDetails.getContainer() )
+			bookDetails = new BookDetails();
+			$.bookshelf.add( bookDetails.getContainer() )
+
+	}
+
+
 }
 
 

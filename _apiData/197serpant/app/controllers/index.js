@@ -394,6 +394,10 @@ function cleanUp(_action){
 
  
 
+
+
+
+
 //// OPEN THE VIEW
 $.index.open({
 	fullscreen:true,
