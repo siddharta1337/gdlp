@@ -426,6 +426,7 @@ function init(){
 		if (! imageDir.exists()) {
 		    imageDir.createDirectory();
 		}
+		
 
 
 

@@ -19,7 +19,7 @@ function init(){
 	
 	_story = new Story(currentStoryID);
 
-	contentLoaded()
+	_story.loadContent(contentLoaded , $.loading)
 
 	function contentLoaded (){
 

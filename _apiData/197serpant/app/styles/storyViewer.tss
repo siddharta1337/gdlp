@@ -42,4 +42,18 @@
 	width:98,
 	height:93,
 	backgroundImage:"/menu/bookshelf_navigator_home.png"
+},
+"#loading":{
+	zIndex:100,
+	backgroundColor:"blue",
+	width:"100%",
+	height:"100%", 
+	top:0,
+	opacity:0.5,
+	left:0
+},
+"#loadBar":{
+	backgroundColor:"green",
+	width:300,
+	height:30,
 }
