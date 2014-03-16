@@ -3,6 +3,7 @@ function FileDownloader(){
 
 FileDownloader.prototype.mainLoader
 
+
 /**
  * Make and http call and save the result into a file.
  * 
@@ -43,6 +44,7 @@ FileDownloader.prototype.downloadOneFile = function(url, localFilepath, callBack
 				status : c.status,
 				path : localFilepath
 			});
+			c = null
 		};
 	}
 
@@ -54,6 +56,7 @@ FileDownloader.prototype.downloadOneFile = function(url, localFilepath, callBack
 	}
 
 	c.send();
+
 };
 
 /**
@@ -80,7 +83,8 @@ FileDownloader.prototype.downloadMultiFile = function(downloadQueue, callBack_Do
 		//which will move the index forward and download another file
 			
 		if( typeof (download_result) !== 'undefined') {
-			callBack_DownloadOneFileFinished(download_result);
+			var percent = FileDownloader.prototype.calculatePercent(downloadQueue.length , queueIndex)
+			callBack_DownloadOneFileFinished(download_result , percent);
 		}
 
 		if(queueIndex < downloadQueue.length) {
@@ -169,22 +173,14 @@ FileDownloader.prototype.makeQueue = function(_array , _folder) {
 	return result
 };
 
-FileDownloader.prototype.getPreloader = function() {
+FileDownloader.prototype.setLoaderScreen = function(_loadScreen) {
+	this.mainLoader = _loadScreen
+};
 
-	
-	this.mainLoader = Ti.UI.createView({
-		zIndex:100,
-		backgroundColor:"#00ff00",
-		width:"100%",
-		height:"100%"
-	})
+FileDownloader.prototype.calculatePercent = function(_length, _current) {
+	var factor = 100/_length
 
-	this.bar = Ti.UI.createView({
-		backgroundColor:"#FF0000",
-		width:100,
-	})
-
-	return  this.mainLoader;
+	return _current*factor;
 };
 
 FileDownloader.prototype.startloader = function() {

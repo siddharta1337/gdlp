@@ -25,29 +25,40 @@ BookMenu.prototype.menuContainer
 
 /// inner methods
 
-	BookMenu.prototype.loadThumbnails = function(_callbackThumbsLoaded) {
+	BookMenu.prototype.loadThumbnails = function(_callbackThumbsLoaded,_loadingScreen) {
 		
+		_loadingScreen.visible = 1;
 
 		var thumbnailsList = []
 
 		for (var i = 0; i < this.jsonData.data.length; i++) {
+
 			/// select the thumbnail according to the language
 			var lang_sufix = (Titanium.Locale.currentLanguage=="en")? this.jsonData.data[i].thumb_en : this.jsonData.data[i].thumb_es;
+			
 			thumbnailsList.push ( "bookshelfData/" + lang_sufix )
+
 		};
-		alert("gaver")
-		alert(thumbnailsList)
+
 
 		var downloader = new FileDownloader()
+			downloader.setLoaderScreen(_loadingScreen)
 
 		var list = downloader.makeQueue( thumbnailsList , "bookshelfData");
 
-			downloader.downloadMultiFile(list ,function(){/*fileprogres*/}, _callbackThumbsLoaded)
-
-
-
-
-
+			
+			downloader.downloadMultiFile(list ,function(e,o){
+				_loadingScreen.children[0].width = o+"%"
+			}, function(){
+				_callbackThumbsLoaded();
+				_loadingScreen.visible = 0;
+			})
+		
+		downloader = null;
+		thumbnailsList = null
+		list = null
+		lang_sufix = null
+		
 	};
 
 
@@ -82,9 +93,7 @@ BookMenu.prototype.menuContainer
 				this.jsonData = JSON.parse(data.text);
 			}
 
-		/// now that have data from file, render the menu
-
-			
+		/// now that have data from file, render the menu			
 	};
 
 
@@ -127,7 +136,8 @@ BookMenu.prototype.menuContainer
 					bookData:e.source.bookData
 				}
 				
-				e.source.getParent().fireEvent("selectedBook", evtData);
+				var evento = e.source.getParent().fireEvent("selectedBook", evtData);
+
 
 
 			})
@@ -151,6 +161,12 @@ BookMenu.prototype.menuContainer
 		e.source.getParent().fireEvent("showBookDetails",evtData);
 	};
 
+	/**
+	*/
+	BookMenu.prototype.getPreloader = function(first_argument) {
+		
+	};
+
 
 	/**
 
@@ -158,8 +174,13 @@ BookMenu.prototype.menuContainer
 	**/
 	BookMenu.prototype.clear = function() {
 		
-		this.removeEventListener('jsonReady', this.populateTable );
+		//this.removeEventListener('jsonReady', this.populateTable );
 		this.menuContainer.removeEventListener('selectedBook', this.selectedBookHandler);
+
+		this.menuContainer.removeAllChildren()
+
+		this.menuContainer = null
+		delete 	BookMenu.prototype.menuContainer
 	};
 
 

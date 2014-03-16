@@ -45,11 +45,6 @@
 
 		</View>
 
-		<Button onClick="closeBookshelf" bottom="0" right="0">
-			CLOSE
-		</Button>
-
-
 
 		<View id="bookshelf_toolBar">
 			<ImageView id="toolbar_button_home" onClick="closeBookshelf" image="/bookshelf/bookshelf_navigator_home.png"></ImageView>
@@ -58,10 +53,16 @@
 		</View>
 		
 		<ImageView image="/bookshelf/bookshelf_buton_play.png" id="bookshelf_play" > </ImageView>
+
 		<ImageView image="/storyAssets/bookshelfData/thumbnails/inori_boat.png" id="thumbnail"> </ImageView>
 		
 		<ImageView id="aboutImage" image="/about/aboutScreen.png"  opacity="0" ></ImageView>
 		
+		<View id="loading">
+			<View id="loadBar_Container" width="300" height="30">
+				<View id="loadBar" ></View>
+			</View>
+		</View>
 		
 	</Window>
 </Alloy>

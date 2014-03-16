@@ -19,9 +19,16 @@ function init(){
 	
 	_story = new Story(currentStoryID);
 
-	_navigator = new Navigator( _story.getSlides() )
+	contentLoaded()
 
-	$.storyStage.add(_navigator.init() );
+	function contentLoaded (){
+
+		
+		_navigator = new Navigator( _story.getSlides() )
+		$.storyStage.add(_navigator.init() );
+
+	}
+	
 
 
 	/** @TODO agregar controles de navegacion **/
