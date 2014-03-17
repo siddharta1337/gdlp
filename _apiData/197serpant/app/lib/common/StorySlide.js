@@ -7,10 +7,12 @@ return: a self contained slide
 var Transition = require('/common/ItemTransition');
 var TextSlide = require('/common/TextSlide')
 
-function StorySlide(_slideData){
+function StorySlide(_slideData, _storyID){
 	
 	// start animated array
 	this.animatedItems = []
+
+	this.storyID = _storyID;
 
 	//alert("yoyoyoy")
 
@@ -39,7 +41,7 @@ function StorySlide(_slideData){
 	//return this.mainView;
 }
 
-
+StorySlide.prototype.storyID
 StorySlide.prototype.mainView;
 StorySlide.prototype.animatedItems;
 
@@ -97,7 +99,7 @@ StorySlide.prototype.createSingleElement = function(_targetElement, _totalCount)
 
 		case "image":
 
-			_targetElement.properties.image = '/storyAssets/story1/'+ _targetElement.properties.image;
+			_targetElement.properties.image = Titanium.Filesystem.applicationDataDirectory +this.storyID +'/'+ _targetElement.properties.image;
 
 			currentElement = Ti.UI.createImageView(_targetElement.properties)
 

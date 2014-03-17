@@ -23,6 +23,7 @@ function init(){
 
 	function contentLoaded (){
 
+		_story.buildSlides()
 		
 		_navigator = new Navigator( _story.getSlides() )
 		$.storyStage.add(_navigator.init() );

@@ -26,6 +26,9 @@ StoryBuilder.prototype.loadContent = function(_callbackThumbsLoaded,_loadingScre
 
 	this.parseJSON( this.storyID , loadedData);
 
+	var storyID = this.storyID
+
+	///runs when json data is available
 	function loadedData(e){
 
 		this._slideData = e;
@@ -33,77 +36,87 @@ StoryBuilder.prototype.loadContent = function(_callbackThumbsLoaded,_loadingScre
 
 		var thumbnailsList = []
 
-		
-	}
-		
+		///extract all files needed for story
+		for (var i = 0; i < this._slideData.length; i++) {
 
 
-/*
-		for (var i = 0; i < this.jsonData.data.length; i++) {
+			for (var a = 0; a < this._slideData[i].stageElements.length; a++) {
 
-			/// select the thumbnail according to the language
-			var lang_sufix = (Titanium.Locale.currentLanguage=="en")? this.jsonData.data[i].thumb_en : this.jsonData.data[i].thumb_es;
-			
-			thumbnailsList.push ( "bookshelfData/" + lang_sufix )
+				switch(this._slideData[i].stageElements[a].type ){
 
+					case "image":
+						//var lang_sufix = "" //(Titanium.Locale.currentLanguage=="en")? this.jsonData.data[i].thumb_en : this.jsonData.data[i].thumb_es;
+						thumbnailsList.push ( storyID+"/" + this._slideData[i].stageElements[a].properties.image );
+					break;
+				}
+			}
 		};
 
-
+		/// start
 		var downloader = new FileDownloader()
-			downloader.setLoaderScreen(_loadingScreen)
+		downloader.setLoaderScreen(_loadingScreen)
 
-		var list = downloader.makeQueue( thumbnailsList , "bookshelfData");
+		var list = downloader.makeQueue( thumbnailsList , storyID);
+	
 
-			
-			downloader.downloadMultiFile(list ,function(e,o){
+		///start downloads
+		downloader.downloadMultiFile(list ,function(e,o){
 				_loadingScreen.children[0].width = o+"%"
 			}, function(){
 				_callbackThumbsLoaded();
 				_loadingScreen.visible = 0;
 			})
 		
+
+		/// purge elements
 		downloader = null;
 		thumbnailsList = null
 		list = null
 		lang_sufix = null
-		*/
-		_callbackThumbsLoaded()
+		builder = null;
+	}
 };
 
 StoryBuilder.prototype.buildSlides = function() {
 	/// create slide class
 	this._slides = []; //Ti.UI.createView()
 
-	for (var i = 0; i < this._slideData.length; i++) {
+	for (var i = 0; i < StoryBuilder.prototype._slideData.length; i++) {
 
-		this._slides.push( new Slide( this._slideData[i] ) )
+		this._slides.push( new Slide( StoryBuilder.prototype._slideData[i] , this.storyID ) )
 
 	};
 };
-
+//handle the story JSON map
 StoryBuilder.prototype.parseJSON = function(_URL, _callbackJsonData) {
 
+	/// Create the folder for this story if not exists
 	var imageDir = Ti.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory , this.storyID);
 		if (! imageDir.exists()) {
 		    imageDir.createDirectory();
 		}
 
-	var downloader = new FileDownloader()
-		downloader.downloadOneFile(Alloy.Globals.remoteServerRoot+"20140311_1.json", Titanium.Filesystem.applicationDataDirectory+"/20140311_1.json", callBack_DownloadOneFileFinished) 
+	/// download the Json File
+		var downloader = new FileDownloader()
+		downloader.downloadOneFile(Alloy.Globals.remoteServerRoot+this.storyID+"/"+this.storyID+".json", Titanium.Filesystem.applicationDataDirectory+this.storyID+"/"+this.storyID+".json", callBack_DownloadOneFileFinished) 
 
+		// this is needed to break the context and make var available inside callBack_DownloadOneFileFinished()
+		var _storyID = this.storyID
+
+	/// once the file is loaded, read it and store data inside the class
 
 		function callBack_DownloadOneFileFinished(){
+			 
+			var file = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory , _storyID+"/"+_storyID+".json");
+			var data = file.read().text;
+			var json = JSON.parse(data);
 
-
-			var file = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory, "20140311_1/20140311_1.json");
-			var data = file.read()//.text;
-			var json = JSON.parse(data.text);
-
+			StoryBuilder.prototype._slideData = json;
 		 	_callbackJsonData(json)
-		 	alert(data)
-		 	alert('nepe')
-		 	alert(json)
 
+		 	file =  null
+		 	data = null
+		 	json = null
 		}
 	
 	
